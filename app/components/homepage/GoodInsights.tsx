@@ -25,7 +25,7 @@ const posts = [
 
 const GoodInsights = () => {
     return (
-        <div className="flex justify-center py-12 md:py-24 bg-gray-50">
+        <div className="flex justify-center py-12 md:py-24">
             <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className={`text-4xl font-normal text-[#1B3233] mb-4 text-center ${zodiak.className}`}>
                     Good stories, good insights

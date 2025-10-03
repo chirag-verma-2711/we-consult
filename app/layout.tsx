@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${zodiak.variable}`}
+        className={`${satoshi.variable} ${zodiak.variable} bg-[var(--lgreen3)]`}
       >
         <Header />
         <main>{children}</main>

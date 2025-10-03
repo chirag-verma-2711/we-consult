@@ -5,8 +5,8 @@ import { satoshi } from "../fonts";
 
 export default function Footer() {
     return (
-        <footer className={`bg-[#05201d] text-gray-300 ${satoshi.className}`}>
-            <div className="max-w-7xl mx-auto px-4 pt-20">
+        <footer className={`bg-[#1b3233] text-gray-300 ${satoshi.className}`}>
+            <div className="max-w-[1400px] mx-auto md:px-[24px] px-[16px] pt-[100px] pb-[40px]">
 
                 {/* <div className="box-news flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6 p-8 border-b border-gray-700">
                     
@@ -26,99 +26,135 @@ export default function Footer() {
                             placeholder="Your email"
                             className="flex-1 px-4 py-2 bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none"
                         />
-                        <button className="ebutton bg-[#cde8d9] text-[#05201d] font-medium px-6 py-2 hover:bg-[#bde0cc] transition">
+                        <button className="ebutton bg-[#cde8d9] text-[#1b3233] font-medium px-6 py-2 hover:bg-[#bde0cc] transition">
                             Subscribe
                         </button>
                     </div>
                 </div> */}
 
-                <div className="box-news flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6 p-8 border-b border-gray-700">
+                <div className="md:flex justify-between items-center bg-[#253c3d] rounded-[12px] py-[60px] px-[48px]">
                     {/* Logo */}
-                    <div>
-                        <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
+                    <div className="footer-top-left md:mb-0 mb-4">
+                        <a href="/" className="flex h-[21px]">
+                            <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
+                        </a>
                     </div>
                     {/* Newsletter */}
-                    <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:bg-[#1B3233] md:rounded-full md:overflow-hidden md:border md:border-gray-600 gap-4">
-                        {/* Input */}
-                        <input
-                            type="email"
+                    <div>
+                        <form
+                            id="wf-form-Newsletter-Form"
+                            name="wf-form-Newsletter-Form"
+                            className="md:flex justify-end items-center"
+                        >
+                            {/* Input */}
+                            <input
+                            className="border border-[color:var(--lgreen2)] text-[#ecf6f2] bg-[#ecf6f21a] rounded-[64px] md:w-[260px] w-full h-[56px] md:mb-0 mb-4 mr-[-50px] pl-[24px] pr-[32px] text-[18px] placeholder-[var(--lgreen2)] outline-none"
+                            maxLength={256}
+                            name="email-2"
                             placeholder="Your email"
-                            className="w-full px-4 py-4 md:px-4 md:py-2 bg-[#1B3233] text-gray-200 placeholder-gray-400 focus:outline-none rounded-[50px] md:rounded-none text-center md:text-left"
-                        />
+                            type="email"
+                            id="email-newsletter"
+                            required
+                            />
 
-                        {/* Button */}
-                        <button className="ebutton bg-[#cde8d9] text-[#05201d] font-medium px-6 py-4 md:px-6 md:py-2 hover:bg-[#bde0cc] transition rounded-[50px] w-full md:w-auto md:rounded-none">
-                            Subscribe
-                        </button>
-                    </div> </div>
+                            {/* Submit Button */}
+                            <input
+                            type="submit"
+                            className="bg-[var(--lgreen2)] text-[var(--dgreen)] rounded-[60px] flex justify-center items-center md:w-[180px] w-full h-[56px] px-[22px] text-[20px]"
+                            defaultValue="Subscribe"
+                            />
+                        </form>
+                    </div>
+                </div>
+                   
 
                 {/* Middle: Left Text + Links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
+                <div className="flex md:flex-row flex-col justify-between md:items-start items:center md:gap-0 gap-[80px] mt-[80px]  md:text-start text-center">
                     {/* Left Content */}
-                    <div className="flex flex-col items-start">
-                        <p className="text-lg mb-6 leading-relaxed text-[#d3f9d8] max-w-md">
-                            With life long relationship and support of science <br />
-                            we help companies grow in an unimaginable speed
+                    <div className="flex flex-col md:items-start items:center gap-[32px] max-w-[400px]">
+                        <p className="text-[var(--lgreen)] text-[22px] leading-[135%]">
+                            With life long relationship and support of science we help companies grow in an unimaginable speed
                         </p>
-                        <button className="bg-[#cde8d9] text-[#05201d]  px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300">
+                        {/* <button className="bg-[#cde8d9] text-[#1b3233]  px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300">
                             Buy this template – $129
-                        </button>
+                        </button> */}
+                        <a href="#" target="_blank" className="flex justify-center items-center h-[52px] px-[32px] rounded-[50px] bg-[var(--lgreen)] text-[var(--dgreen)] font-normal transition-colors duration-200 hover:bg-[var(--lgreen2)] text-[20px]">Buy this template - $129</a>
                     </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-[#CEEAD5] ">
+                    <div className="right-bottom-footer">
+                        <div className="flex flex-col md:flex-row md:gap-[122px] gap-[80px] md:text-start text-center">
+                            <div className="">
+                                <ul className="space-y-4">
+                                    <li><div className="heading-footer-links">Homepages</div></li>
+                                    <li><a href="#" className="footer-link">Home A</a></li>
+                                    <li><a href="#" className="footer-link">Home B</a></li>
+                                    <li><a href="#" className="footer-link">Home C</a></li>
+                                </ul>
+                            </div>
+                            <div className="">
+                                <ul className="space-y-4">
+                                    <li><div className="heading-footer-links">About us</div></li>
+                                    <li><a href="#" className="footer-link">About A</a></li>
+                                    <li><a href="#" className="footer-link">About B</a></li>
+                                    <li><a href="#" className="footer-link">About C</a></li>
+                                </ul>                                
+                            </div>
+                            <div className="block">
+                                <ul className="space-y-4">
+                                    <li><div className="heading-footer-links">Contact</div></li>
+                                    <li><a href="#" className="footer-link">Contact A</a></li>
+                                    <li><a href="#" className="footer-link">Contact B</a></li>
+                                    <li><a href="#" className="footer-link">Contact C</a></li>
+                                </ul>
+                            </div>                      
+                            <div className="block">
+                                <ul className="space-y-4">
+                                    <li><div className="heading-footer-links">Other pages</div></li>
+                                    <li><a href="#" className="footer-link">Careers</a></li>
+                                    <li><a href="#" className="footer-link">Case studies</a></li>
+                                    <li><a href="#" className="footer-link">Blog</a></li>
+                                    <li><a href="#" className="footer-link">Pricing</a></li>
+                                    <li><a href="#" className="footer-link">Legal</a></li>
+                                </ul>
 
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">Homepages</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">Home A</Link></li>
-                                <li><Link href="#" className="hover:underline">Home B</Link></li>
-                                <li><Link href="#" className="hover:underline">Home C</Link></li>
-                            </ul>
-                        </div>
+                                <hr className="my-[42px]  border-t border-[#ceead54d]" />
 
-                        {/* About us */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">About us</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">About A</Link></li>
-                                <li><Link href="#" className="hover:underline">About B</Link></li>
-                                <li><Link href="#" className="hover:underline">About C</Link></li>
-                            </ul>
-                        </div>
-
-                        {/* Contact */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">Contact</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">Contact A</Link></li>
-                                <li><Link href="#" className="hover:underline">Contact B</Link></li>
-                                <li><Link href="#" className="hover:underline">Contact C</Link></li>
-                            </ul>
-                        </div>
-
-                        {/* Other Pages */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">Other pages</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">Careers</Link></li>
-                                <li><Link href="#" className="hover:underline">Case studies</Link></li>
-                                <li><Link href="#" className="hover:underline">Blog</Link></li>
-                                <li><Link href="#" className="hover:underline">Pricing</Link></li>
-                                <li><Link href="#" className="hover:underline">Legal</Link></li>
-                            </ul>
+                                <ul className="space-y-4">
+                                    <li><a href="#" className="footer-link">Style guide</a></li>
+                                    <li><a href="#" className="footer-link">Licenses</a></li>
+                                    <li><a href="#" className="footer-link">Start here</a></li>
+                                    <li><a href="#" className="footer-link">Changelog</a></li>
+                                    <li><a href="#" className="footer-link">See all pages</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
                 {/* Bottom note */}
-                <div className="border-t border-gray-700 py-6 text-sm flex flex-col sm:flex-row justify-between items-center">
+                {/* <div className="border-t border-gray-700 py-6 text-sm flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-[#CEEAD5]">
                         Template designed with love by <Link href="#" className="underline hover:text-white">Wavesdesign</Link>, powered by <Link href="#" className="underline hover:text-white">Webflow</Link>
                     </p>
                     <Link href="#" className="underline hover:text-white mt-3 sm:mt-0">
                         See all templates
                     </Link>
+                </div> */}
+
+
+                <div className="flex md:flex-row flex-col justify-between items-center mt-20 pt-10 text-base border-t border-[var(--lgreen)]">
+                    <div className="text-[var(--lgreen)] text-base md:text-start text-center md:mb-0 mb-7">
+                        Template designed with love by
+                        <a href="#" target="_blank" className="legal-footer-link underline" > Wavesdesign</a>, powered by <a href="#" target="_blank" className="legal-footer-link underline" > Webflow </a>
+                    </div>
+                    <div className="text-[var(--lgreen)] text-base">
+                        <a href="#" target="_blank" className="legal-footer-link underline" > See all templates </a>
+                    </div>
                 </div>
+
+
+                
             </div>
         </footer>
     );

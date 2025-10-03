@@ -6,7 +6,8 @@ import { satoshi } from "@/app/fonts";
 export default function ConsultationSection() {
     return (
         <section className="bg-[#DAEBE3] py-16 px-4 relative overflow-hidden">
-            <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 xl:w-[1400px] xl:h-[1400px] lg:w-[1100px] lg:h-[1100px]  md:w-[800px] md:h-[800px] w-[800px] h-[800px] rounded-full bg-[#1b3233]"></div>
+            {/* <div className="z-[1] bg-[var(--dark)] rounded-full w-[80vw] h-[80vw] absolute top-[-40vw] left-[-40vw]"></div> */}
+            <div className="absolute top-[-20%] left-[-10%] -translate-x-1/2 -translate-y-1/2 xl:w-[1400px] xl:h-[1400px] lg:w-[1100px] lg:h-[1100px]  md:w-[800px] md:h-[800px] w-[800px] h-[800px] rounded-full bg-[#1b3233]"></div>
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-[28px] md:gap-[32px]">
 
                 <div className="relative flex justify-center md:justify-end">

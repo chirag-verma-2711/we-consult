@@ -1,4 +1,14 @@
 @import "tailwindcss";
+
+:root {
+  --dgreen: #1b3233;
+  --lgreen: #ceead5;
+  --lgreen2: #daebe3;
+  --lgreen3: #ecf6f2;
+}
+
+
+
 .bg-lgreen {
     background-color: #1b3233 !important;
 }
@@ -11,6 +21,13 @@ footer.bg-lgreen {
 }
 p.text-lg.mb-6.leading-relaxed {
     color: darkgray;
+}
+
+.right-bottom-footer .footer-link, .right-bottom-footer .heading-footer-links {
+    color: var(--lgreen);
+    font-size: 18px;
+    line-height: 140%;
+    text-decoration: none;
 }
 
 .mainbanner img {
@@ -32,7 +49,7 @@ p.text-lg.mb-6.leading-relaxed {
 }
 
 .subtitle-h {
-    font-size: 32px !important;
+    font-size: 31px !important;
     font-weight: 300 !important;
     line-height: 135% !important;
 }
