@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { satoshi } from "@/app/fonts";
 import { zodiak } from "@/app/fonts";
 
@@ -64,9 +65,9 @@ const GoodInsights = () => {
             //                                 <h3
             //                                     className={`text-3xl font-bold text-gray-900 mt-2 mb-3 font-normal ${zodiak.className}`}
             //                                 >
-            //                                     <a href="#" className="text-[#333] ">
+            //                                     <Link href="#" className="text-[#333] ">
             //                                         {post.title}
-            //                                     </a>
+            //                                     </Link>
             //                                 </h3>
             //                                 <p className={`text-gray-600 text-base text-xl ${satoshi.className}`}>
             //                                     {post.description}
@@ -99,9 +100,9 @@ const GoodInsights = () => {
                     <h3
                       className={`text-3xl font-bold text-gray-900 mt-2 mb-3 font-normal ${zodiak.className}`}
                     >
-                      <a href="#" className="text-[#333]">
+                      <Link href="#" className="text-[#333]">
                         {post.title}
-                      </a>
+                      </Link>
                     </h3>
                     <p
                       className={`text-gray-600 text-base text-xl ${satoshi.className}`}
