@@ -17,7 +17,7 @@ export default function GreatResult() {
                     />
                 </div>
 
-                <div className="md:pl-[70px] md:text-start text-center ">
+                <div className="md:pl-[70px] md:text-start text-center max-w-[520px]">
                     <h2 className={`md:text-[40px] text-[32px] font-thin leading-snug mb-4 ${zodiak.className}`}>
                         Not only consulting, not only great results
                     </h2>
