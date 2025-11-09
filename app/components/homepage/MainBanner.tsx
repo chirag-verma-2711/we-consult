@@ -1,43 +1,98 @@
-import React from 'react'
+import React from "react";
 import { satoshi, zodiak } from "@/app/fonts";
-import Image
- from 'next/image';
+import Image from "next/image";
+import HeroSlider from "./heroslider/HeroSlider";
 
-const MainBanner = () => {
-    return (
-        <div className="bg-lgreen flex flex-col items-center justify-center text-center">
-            <div className="container mx-auto px-4">
 
-                <div className="flex space-x-3 mb-6 justify-center md:mt-24 mt-16">
-                    <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
-                    <span className="w-[52px] h-8 rounded-[40px] bg-[#CEEAD5]"></span>
-                    <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
-                </div>
 
+
+const MainBanner: React.FC = () => {
+  // useEffect(() => {
+  //   import("scrollreveal").then((ScrollRevealModule) => {
+  //     const ScrollReveal = ScrollRevealModule.default;
+  //     ScrollReveal().reveal(".heading-home h1", {
+  //       origin: "bottom",
+  //       distance: "100px",
+  //       duration: 800,
+  //       delay: 100,
+  //       easing: "ease-out",
+  //       reset: false,
+  //     });
+  //     ScrollReveal().reveal(".heading-home p", {
+  //       origin: "bottom",
+  //       distance: "100px",
+  //       duration: 800,
+  //       delay: 500,
+  //       easing: "ease-out",
+  //       reset: false,
+  //     });
+  //   });
+  // }, []);
+
+  return (
+    <div className="relative w-full  overflow-hidden">
+      <iframe
+        className="absolute top-1/2 left-1/2 w-[200vw] h-[200vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        src="https://www.youtube.com/embed/IP3vF2jpnJk?autoplay=1&mute=1&loop=1&playlist=IP3vF2jpnJk&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0"
+        title="Background Video"
+        allow="autoplay; encrypted-media"
+      ></iframe>
+      <div className="absolute inset-0 bg-[#1a3d3d]/80 z-10"></div>
+
+      {/* Your content over video */}
+      <div className="relative z-10 text-white">
+        <div className="flex flex-col items-center justify-center text-center">
+          <div className="container mx-auto px-4">
+            <div className="flex space-x-3 justify-center my-12">
+              <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
+              <span className="w-[52px] h-8 rounded-[40px] bg-[#CEEAD5]"></span>
+              <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
             </div>
-            <div className="heading-home mb-10">
-                <h1
-                    className={`${zodiak.className} text-3xl sm:text-5xl md:text-6xl max-w-3xl font-serif font-semibold text-[#DFFFE0] leading-tight heading-h`} >
-                    Opening gates to digital world
-                </h1>
-                <p
-                    className={`${satoshi.className} subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]`}>
-                    The most professional consulting out, there changing the realm business and digital
-                </p>
+          </div>
+          <div className="heading-home mb-4">
+            
+            <p
+              className={`${satoshi.className} subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]`}
+            >
+              From Insight to Impact
+            </p>
+            <h1
+              className="md:text-6xl sm:text-5xl text-3xl  max-w-6xl font-bold text-[#DFFFE0] leading-tight"
+            >
+              We Make it Happen
+            </h1>
+          </div>
 
-            </div>
-            <div className="mainbanner max-w-[1100px] w-full">
-                <Image
-                    src="/assests/header/images/mainimg.webp"
-                    alt="Logo"
-                    width={1000}
-                    height={1000}
-                    className="banner-pic border-[20px] md:border-[50px] border-white border-b-0"
-                />
-            </div>
+          {/* <div className="mainbanner max-w-[1100px] w-full">
+            <Image
+              src="/assests/header/images/mainimg.webp"
+              alt="Logo"
+              width={1000}
+              height={1000}
+              className="banner-pic border-[20px] md:border-[50px] border-white border-b-0"
+            />
+          </div> */}
+
+
+          
+
+              
+
+
+
 
         </div>
-    )
-}
+      </div>
+      <div className="relative z-20 mt-[-300px] translate-y-[50%]">
+        <HeroSlider />
+      </div>
 
-export default MainBanner
+    </div>
+
+
+
+
+  );
+};
+
+export default MainBanner;

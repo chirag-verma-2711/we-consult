@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { zodiak } from "@/app/fonts";
 import { satoshi } from "@/app/fonts";
+import AppointmentButton from "../AppointmentButton";
+
 
 export default function ConsultationSection() {
     return (
@@ -11,7 +13,7 @@ export default function ConsultationSection() {
 
                 <div className="relative flex justify-center md:justify-end">
                         <Image
-                            src="/assests/header/scrumpage-logos/CTA Three.webp"
+                            src="/assests/header/scrumpage-logos/consultationtoday.jpg"
                             alt="Consultation"
                             width={500}
                             height={600}
@@ -27,9 +29,11 @@ export default function ConsultationSection() {
                         Pellentesque ut neque. Duis arcu tortor, suscipit eget, imperdiet nec,
                         imperdiet iaculis, ipsum. Sed mollis, eros et ultrices tempus.
                     </p>
-                    <button className={`px-6 py-2 bg-[#1B3233] text-[20px] text-[#ECF6F2] rounded-full hover:bg-[#1e4741] transition ${satoshi.className}`}>
-                        Contact sales
-                    </button>
+                    {/* <button
+                     className={`px-6 py-2 bg-[#1B3233] text-[20px] text-[#ECF6F2] rounded-full hover:bg-[#1e4741] transition ${satoshi.className}`}>
+                        Schedule Appointment
+                    </button> */}
+                    <AppointmentButton />
                 </div>
             </div>
         </section>

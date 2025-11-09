@@ -1,229 +1,472 @@
-
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { satoshi } from "../fonts";
+import AppointmentButton from "./AppointmentButton";
+
+
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productMenuOpen, setProductMenuOpen] = useState(false);
-  const [caseStudiesOpen, setCaseStudiesOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+    closeMenu(); // close menu if on mobile
+  };
+  // Toggle mobile menu
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // Close mobile menu on link click
+  const closeMenu = () => setMenuOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const today = new Date().toISOString().split("T")[0]; // disable past dates
+  const [minTime, setMinTime] = useState("");
+  // useEffect(() => {
+  //   const today = new Date();
+  //   const formatted = today.toISOString().split("T")[0];
+  //   setMinDate(formatted);
+  // }, []);
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedDate = e.target.value;
+    const now = new Date();
+    if (selectedDate === now.toISOString().split("T")[0]) {
+      setMinTime(now.toTimeString().slice(0, 5));
+    } else {
+      setMinTime("");
+    }
+  };
 
   return (
-    <header
-      className={`sticky top-0 z-50 bg-lgreen border-b border-gray-700 ${satoshi.className}`}
-    >
-      <nav
-        aria-label="Global"
-        className="mx-auto flex max-w-[1600px] items-center justify-between p-6 lg:px-8"
-      >
-        <div className="flex lg:flex-1">
-          <Link href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <Image
-              src="\assests\header\images\665d580d007277205ba132e1_LogoLight.svg"
-              alt="Logo"
-              width={250}
-              height={32}
-            />
-          </Link>
-        </div>
-
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              aria-hidden="true"
-              className="size-6"
-            >
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex lg:gap-x-12 text-[20px]  text-[#CEEAD5]">
-          <Link href="#">Home</Link>
-          <Link href="#">About</Link>
-          <Link href="#">Career</Link>
-
-          {/* Case Studies Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setCaseStudiesOpen(!caseStudiesOpen)}
-              className="flex items-center gap-x-1"
-            >
-              Case Studies
-              <svg
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-                className="size-5 text-gray-500"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.23 7.21a.75.75 0 0 1 1.06 0L10 
-                  10.92l3.72-3.71a.75.75 0 1 1 
-                  1.06 1.06l-4.25 
-                  4.25a.75.75 0 0 1-1.06 
-                  0L5.23 8.27a.75.75 0 0 1 0-1.06Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-            {caseStudiesOpen && (
-              <div className="absolute left-0 mt-2 w-48 rounded-md bg-lgreen shadow-lg ring-1 ring-white/10">
-                <Link
-                  href="#"
-                  className="block px-4 py-2 text-sm text-white hover:bg-white/10"
-                >
-                  Case Study 1
-                </Link>
-                <Link
-                  href="#"
-                  className="block px-4 py-2 text-sm text-white hover:bg-white/10"
-                >
-                  Case Study 2
-                </Link>
-                <Link
-                  href="#"
-                  className="block px-4 py-2 text-sm text-white hover:bg-white/10"
-                >
-                  Case Study 3
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link href="#">Contact Us</Link>
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-lgreen p-6">
-          <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5">
-              <Image
-                src="\assests\header\images\665d580d007277205ba132e1_LogoLight.svg"
+    <header className={`sticky top-0 z-50 ${satoshi.className}`}>
+      <nav className="bg-[var(--dgreen)] border-b border-gray-700 relative">
+        {/* <div className="max-w-7xl mx-auto md:px-[24px] px-[12px]"> */}
+        <div className="container mx-auto md:px-[24px] px-[12px]">
+          <div className="flex justify-between items-center h-[82px]">
+            {/* Logo */}
+            <Link href="/" className="text-xl font-bold text-gray-800">
+              <img
+                src="/assests/header/images/leapbridgelogo.svg"
                 alt="Logo"
-                width={200}
+                width={500}
                 height={100}
+                className="h-[50px] w-auto"
               />
             </Link>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-400"
-            >
-              <span className="sr-only">Close menu</span>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                aria-hidden="true"
-                className="size-6"
-              >
-                <path
-                  d="M6 18 18 6M6 6l12 12"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
 
-          <div className="mt-6 space-y-2">
-            <Link
-              href="#"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
-            >
-              Home
-            </Link>
-            <Link
-              href="#"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
-            >
-              About
-            </Link>
-            <Link
-              href="#"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
-            >
-              Career
-            </Link>
-
-            {/* Mobile Case Studies Dropdown */}
-            <button
-              onClick={() => setCaseStudiesOpen(!caseStudiesOpen)}
-              className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
-            >
-              Case Studies
-              <svg
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-                className="size-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.22 8.22a.75.75 0 0 1 1.06 
-                  0L10 11.94l3.72-3.72a.75.75 
-                  0 1 1 1.06 1.06l-4.25 
-                  4.25a.75.75 0 0 1-1.06 
-                  0L5.22 9.28a.75.75 
-                  0 0 1 0-1.06Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-            {caseStudiesOpen && (
-              <div className="ml-4 space-y-2">
-                <Link
-                  href="#"
-                  className="block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/5"
-                >
-                  Case Study 1
-                </Link>
-                <Link
-                  href="#"
-                  className="block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/5"
-                >
-                  Case Study 2
-                </Link>
-                <Link
-                  href="#"
-                  className="block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/5"
-                >
-                  Case Study 3
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center justify-end flex-1">
+              {/* Home */}
+              <div className="relative group">
+                <Link href="/" onClick={() => handleLinkClick("/")}>
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "/"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    Home
+                  </button>
                 </Link>
               </div>
-            )}
 
-            <Link
-              href="#"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
-            >
-              Contact Us
-            </Link>
+              {/* About Us */}
+              <div className="relative group">
+                <Link href="#about" onClick={() => handleLinkClick("#about")}>
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "#about"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    About Us
+                  </button>
+                </Link>
+              </div>
+
+              {/* Category Experience */}
+              <div className="relative group">
+                <Link
+                  href="#category"
+                  onClick={() => handleLinkClick("#category")}
+                >
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "#category"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    Category Experience
+                  </button>
+                </Link>
+              </div>
+
+              {/* Industries */}
+              <div className="relative group">
+                <Link
+                  href="#category"
+                  onClick={() => handleLinkClick("#category")}
+                >
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "#category"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    {/* Category Experience */}
+              <div className="relative group">
+                <Link
+                  href="#category"
+                  onClick={() => handleLinkClick("#Industries")}
+                >
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "#category"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    Industries 
+                  </button>
+                </Link>
+              </div>
+                  </button>
+                </Link>
+              </div>
+
+              {/* Services */}
+              <div className="relative group">
+                <Link
+                  href="#service"
+                  onClick={() => handleLinkClick("#casestudies")}
+                >
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "#service"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    Case Studies
+                  </button>
+                </Link>
+              </div>
+
+              {/* Contact Us */}
+              <div className="relative group">
+                <Link
+                  href="#contact"
+                  onClick={() => handleLinkClick("#contact")}
+                >
+                  <button
+                    className={`text-lg p-3 flex items-center ${
+                      activeLink === "#contact"
+                        ? "text-[#53FFA9]"
+                        : "text-[var(--lgreen)]"
+                    }`}
+                  >
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
+
+              {/* Schedule Appointment Button */}
+              <AppointmentButton />
+              {/* <div
+                className="flex justify-center items-center ml-3"
+                onClick={() => setIsOpen(true)}
+              >
+                <div className="flex items-center justify-center gap-2 bg-[#3BB273] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#34a266] hover:shadow-lg transition-all duration-300">
+                  <span className="font-medium text-sm sm:text-base">
+                    Schedule Appointment
+                  </span>
+                </div>
+              </div> */}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button
+                onClick={toggleMenu}
+                className={`flex flex-col justify-center items-center gap-[6px] h-[47px] w-[47px] rounded-full transition-colors duration-300 ${
+                  menuOpen ? "bg-[var(--lgreen)]" : "bg-[#ceead51a]"
+                }`}
+              >
+                <div
+                  className={`h-[2px] transition-all duration-300 ${
+                    menuOpen ? "w-[20px] bg-[#000]" : "w-[30px] bg-[#ceead5]"
+                  }`}
+                ></div>
+                <div
+                  className={`h-[2px] transition-all duration-300 ${
+                    menuOpen ? "w-[30px] bg-[#000]" : "w-[20px] bg-[#ceead5]"
+                  }`}
+                ></div>
+              </button>
+            </div>
           </div>
         </div>
-      )}
+
+        {/* Mobile Menu */}
+        <div
+          id="mobile-menu"
+          className={`md:hidden py-[25px] px-[45px] space-y-2 absolute bg-[var(--dgreen)] w-full top-[82px] max-h-[calc(100vh-82px)] overflow-y-auto transition-all duration-300 ${
+            menuOpen ? "block" : "hidden"
+          }`}
+        >
+          {/* Home */}
+          <details className="group py-[16px] px-[20px] mb-0 relative">
+            <summary className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg">
+              <Link href="#" onClick={closeMenu}>
+                Home
+              </Link>
+            </summary>
+          </details>
+
+          {/* About */}
+          <details className="group py-[16px] px-[20px] mb-0 relative">
+            <summary className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg">
+              <Link href="#about" onClick={closeMenu}>
+                About us
+              </Link>
+            </summary>
+          </details>
+
+          {/* Industries */}
+          <details className="group py-[16px] px-[20px] mb-0 relative">
+            <summary
+              className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
+              onClick={closeMenu}
+            >
+              <Link href="#category" onClick={closeMenu}>
+                Category Experience
+              </Link>
+            </summary>
+          </details>
+
+          <details className="group py-[16px] px-[20px] mb-0 relative">
+            <summary
+              className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
+              onClick={closeMenu}
+            >
+              <Link href="#Industries" onClick={closeMenu}>
+                Industries
+              </Link>
+            </summary>
+          </details>
+
+          <details className="group py-[16px] px-[20px] mb-0 relative">
+            <summary
+              className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
+              onClick={closeMenu}
+            >
+              <Link href="#service" onClick={closeMenu}>
+                Case Studies
+              </Link>
+            </summary>
+          </details>
+
+
+          {/* Contact Us */}
+          <details className="group py-[16px] px-[20px] mb-0 relative">
+            <summary
+              className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
+              onClick={closeMenu}
+            >
+              <Link href="#contact" onClick={closeMenu}>
+                Contact Us
+              </Link>
+            </summary>
+          </details>
+
+          {/* Schedule Appointment */}
+          <AppointmentButton />
+          {/* <div
+            className="mt-4 flex justify-center items-center h-11 sm:h-12 px-4 sm:px-5 text-base sm:text-lg font-normal rounded-[50px] bg-[var(--lgreen)] text-[var(--dgreen)] transition-colors duration-200 hover:bg-[var(--lgreen2)]"
+            onClick={() => setIsOpen(true)}
+          >
+            Schedule Appointment
+          </div> */}
+        </div>
+        {isOpen && (
+          <div
+            className="
+            fixed inset-0
+            bg-[#00000040]
+            backdrop-blur-md
+            flex justify-center items-center
+            z-50
+          "
+          >
+            {/* Modal Box */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl w-[90%] max-w-md p-6 relative border border-white/40">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                &times;
+              </button>
+
+              {/* Title */}
+              <h2 className="text-2xl font-semibold text-[#356E54] mb-4 text-center">
+                Contact Us
+              </h2>
+
+              {/* Form */}
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+
+                  const formData = new FormData(e.currentTarget);
+                  const data = {
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    mobile: formData.get("mobile"),
+                    company: formData.get("company"),
+                    date: formData.get("date"),
+                    time: formData.get("time"),
+                    agree: formData.get("agree"),
+                  };
+
+                  if (!data.agree) {
+                    alert("You must agree to the Terms and Conditions.");
+                    return;
+                  }
+
+                  const response = await fetch("/api/sendAppointmentEmail", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                  });
+                  console.log("test", response);
+                  if (response.ok) {
+                    alert("Appointment submitted successfully!");
+                    setIsOpen(false);
+                  } else {
+                    alert("Failed to submit. Please try again.");
+                  }
+                }}
+                className="space-y-4"
+              >
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#356E54]"
+                    placeholder="Your Name"
+                  />
+                </div>
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#356E54]"
+                    placeholder="Your Email"
+                  />
+                </div>
+
+                {/* Mobile */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Mobile Number
+                  </label>
+                  <input
+                    type="tel"
+                    name="mobile"
+                    required
+                    pattern="[0-9]{10}"
+                    className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#356E54]"
+                    placeholder="Your Mobile"
+                  />
+                </div>
+
+                {/* Company */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    required
+                    className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#356E54]"
+                    placeholder="Your Company"
+                  />
+                </div>
+
+                {/* Date and Time */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex-1">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Date of Appointment
+                    </label>
+                    <input
+                      type="date"
+                      name="date"
+                      min={today}
+                      onChange={handleDateChange}
+                      required
+                      className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#356E54]"
+                    />
+                  </div>
+
+                  <div className="flex-1">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Time of Appointment
+                    </label>
+                    <input
+                      type="time"
+                      name="time"
+                      min={minTime}
+                      required
+                      className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#356E54]"
+                    />
+                  </div>
+                </div>
+
+                {/* Terms & Conditions */}
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    id="agree"
+                    required
+                    className="h-4 w-4 text-[#356E54] border-gray-300 rounded focus:ring-[#356E54]"
+                  />
+                  <label htmlFor="agree" className="text-sm text-gray-700">
+                    I agree to the{" "}
+                    <a href="#" className="text-[#356E54] underline">
+                      Terms and Conditions
+                    </a>
+                  </label>
+                </div>
+
+                {/* Submit */}
+                <button
+                  type="submit"
+                  className="w-full bg-[#356E54] text-white py-2 rounded-md hover:bg-[#2d5946] transition"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+      </nav>
     </header>
   );
 }

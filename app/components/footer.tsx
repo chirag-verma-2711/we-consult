@@ -35,7 +35,9 @@ export default function Footer() {
                 <div className="box-news flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6 p-8 border-b border-gray-700">
                     {/* Logo */}
                     <div>
-                        <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
+                        {/* <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
+                         */}
+                         <h2 className="text-2xl font-semibold text-[var(--lgreen)]">Subscribe to our newsletter!</h2>
                     </div>
                     {/* Newsletter */}
                     <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:bg-[#1B3233] md:rounded-full md:overflow-hidden md:border md:border-gray-600 gap-4">
@@ -113,7 +115,7 @@ export default function Footer() {
                 {/* Bottom note */}
                 <div className="border-t border-gray-700 py-6 text-sm flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-[#CEEAD5]">
-                        Template designed with love by <Link href="#" className="underline hover:text-white">Wavesdesign</Link>, powered by <Link href="#" className="underline hover:text-white">Webflow</Link>
+                       Copyright © 2025 Leap Bridge Consulting. All rights reserved.
                     </p>
                     <Link href="#" className="underline hover:text-white mt-3 sm:mt-0">
                         See all templates

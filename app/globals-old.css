@@ -1,22 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @import "tailwindcss";
-
-:root {
-  --dgreen: #1b3233;
-  --lgreen: #ceead5;
-  --lgreen2: #daebe3;
-  --lgreen3: #ecf6f2;
-}
-html {
-  scroll-behavior: smooth;
-}
-html body{
-     font-family: "Poppins", sans-serif !important;
-}
-.custom_height{
-    height: 30px;
-}
 .bg-lgreen {
     background-color: #1b3233 !important;
 }
@@ -31,13 +13,6 @@ p.text-lg.mb-6.leading-relaxed {
     color: darkgray;
 }
 
-.right-bottom-footer .footer-link, .right-bottom-footer .heading-footer-links {
-    color: var(--lgreen);
-    font-size: 18px;
-    line-height: 140%;
-    text-decoration: none;
-}
-
 .mainbanner img {
     text-align: center;
     border-top-left-radius: 500px;
@@ -49,15 +24,15 @@ p.text-lg.mb-6.leading-relaxed {
 }
 
 .heading-h {
-    font-size: 81px;
-    font-weight: 500;
+    font-size: 92px;
+    font-weight: 400;
     line-height: 120%;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 .subtitle-h {
-    font-size: 31px !important;
+    font-size: 32px !important;
     font-weight: 300 !important;
     line-height: 135% !important;
 }
@@ -93,33 +68,7 @@ p.text-lg.mb-6.leading-relaxed {
     margin-right: 20%;
 }
 
-
-.brdr_topbtm:after {
-    content: '';
-    height:1.5px;
-    width: 60px;
-    background:#707070;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.brdr_topbtm:before {
-    content: '';
-    height: 1.5px;
-    width: 60px;
-    background: #707070;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 @media (max-width: 768px) {
-.brdr_topbtm:after, .brdr_topbtm:before {
-    display: none;
-}
-
   .bookbox {
     padding: 0% !important; 
     margin-right: 0% !important;        
@@ -147,29 +96,3 @@ p.text-lg.mb-6.leading-relaxed {
 .box-news{
         padding: 5%;
 }
-
-img.h-8 {
-    height: 50px;
-}
-
-
-
-
-
-/* .video-bg-wrapper {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.video-bg-wrapper iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  object-fit: cover;
-} */
