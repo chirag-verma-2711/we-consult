@@ -1,23 +1,28 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Carousel() {
-
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
-  const prevSlide = () => setCurrent((prev) => (prev === 0 ? 2 : prev - 1));
+  // const prevSlide = () => setCurrent((prev) => (prev === 0 ? 2 : prev - 1));
+
+  // ✅ Auto Slide Effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval); // cleanup
+  }, [current]); // or use [] to make it constant interval
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-full border-[35px] border-[var(--lgreen)]" >
-
+    <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-full border-[35px] border-[var(--lgreen)]">
       {/* Slider Track */}
       <div
         className="flex transition-transform duration-700 "
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
-
         {/* Slide 1 */}
         <div className="min-w-full relative">
           <img
@@ -28,7 +33,8 @@ export default function Carousel() {
           <div className="absolute bottom-[50%] pb-10 left-0 w-full h-full flex flex-col items-center justify-end bg-[linear-gradient(0deg,rgba(0,0,0,0.5)_0%,rgba(255,255,255,0)_50%)] text-center text-white">
             <h3 className="text-2xl font-medium">Network Optimisation</h3>
             <p className="text-sm px-12">
-              We partner with organizations to drive efficiencies across sales & distribution verticals
+              We partner with organizations to drive efficiencies across sales &
+              distribution verticals
             </p>
           </div>
         </div>
@@ -43,7 +49,8 @@ export default function Carousel() {
           <div className="absolute bottom-[50%] pb-10 left-0 w-full h-full flex flex-col items-center justify-end bg-[linear-gradient(0deg,rgba(0,0,0,0.7)_0%,rgba(255,255,255,0)_50%)] text-center text-white">
             <h3 className="text-2xl font-medium">Capabilities</h3>
             <p className="text-sm px-12">
-              Building the right people and process capabilities to sustain transformation and accelerate performance.
+              Building the right people and process capabilities to sustain
+              transformation and accelerate performance.
             </p>
           </div>
         </div>
@@ -56,13 +63,15 @@ export default function Carousel() {
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-[50%] pb-10 left-0 w-full h-full flex flex-col items-center justify-end bg-[linear-gradient(0deg,rgba(0,0,0,0.7)_0%,rgba(255,255,255,0)_50%)] text-center text-white">
-            <h3 className="text-2xl font-medium">Technology & Data Analytics</h3>
+            <h3 className="text-2xl font-medium">
+              Technology & Data Analytics
+            </h3>
             <p className="text-sm px-12">
-              Embedding technology and analytics to make decisions faster, smarter, and more predictive.
+              Embedding technology and analytics to make decisions faster,
+              smarter, and more predictive.
             </p>
           </div>
         </div>
-
       </div>
 
       {/* <button
@@ -91,7 +100,6 @@ export default function Carousel() {
           ></span>
         ))}
       </div>
-
     </div>
   );
 }
