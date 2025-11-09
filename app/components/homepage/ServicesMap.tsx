@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ServicesMap = () => {
   return (
-    <section className="relative w-full flex flex-col items-center justify-center bg-[#daebe3] bg-[url('/assests/header/images/dotted_bg.png')] bg-no-repeat bg-[position:50%_-150px] bg-[length:67%]">
+    <section className="relative w-full flex flex-col items-center justify-center bg-[#daebe3] bg-[url('/assests/header/images/dotted_bg.png')] bg-no-repeat md:bg-[position:50%_-150px] bg-[position:50%_50px] md:bg-[length:67%] bg-[length:100%]">
       <div className="relative z-10 max-w-4xl pb-[100px] pt-[150px] md:px-[100px] px-[36px] text-center ">
       {/* E:\my-app-old\public\assests\header\images\dotted_bg.png */}
         <h2 className="text-4xl font-semibold mb-1 text-[var(--dgreen)]">

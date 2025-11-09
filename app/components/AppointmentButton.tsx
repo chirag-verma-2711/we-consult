@@ -35,7 +35,7 @@ export default function AppointmentButton() {
     <>
       {/* Trigger Button */}
       <div
-        className="flex items-center w-fit justify-center gap-2 bg-[#3BB273] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#34a266] hover:shadow-lg transition-all duration-300 cursor-pointer"
+        className="flex items-center w-fit justify-center gap-2 bg-[#3BB273] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#34a266] hover:shadow-lg transition-all duration-300 cursor-pointer md:mx-0 mx-auto"
         onClick={() => setIsOpen(true)}
       >
         Schedule Appointment

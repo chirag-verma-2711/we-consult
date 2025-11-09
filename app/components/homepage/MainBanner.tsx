@@ -3,9 +3,6 @@ import { satoshi, zodiak } from "@/app/fonts";
 import Image from "next/image";
 import HeroSlider from "./heroslider/HeroSlider";
 
-
-
-
 const MainBanner: React.FC = () => {
   // useEffect(() => {
   //   import("scrollreveal").then((ScrollRevealModule) => {
@@ -50,15 +47,12 @@ const MainBanner: React.FC = () => {
             </div>
           </div>
           <div className="heading-home mb-4">
-            
             <p
               className={`${satoshi.className} subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]`}
             >
               From Insight to Impact
             </p>
-            <h1
-              className="md:text-6xl sm:text-5xl text-3xl  max-w-6xl font-bold text-[#DFFFE0] leading-tight"
-            >
+            <h1 className="md:text-6xl sm:text-5xl text-3xl  max-w-6xl font-bold text-[#DFFFE0] leading-tight">
               We Make it Happen
             </h1>
           </div>
@@ -72,26 +66,12 @@ const MainBanner: React.FC = () => {
               className="banner-pic border-[20px] md:border-[50px] border-white border-b-0"
             />
           </div> */}
-
-
-          
-
-              
-
-
-
-
         </div>
       </div>
-      <div className="relative z-20 mt-[-300px] translate-y-[50%]">
+      <div className="relative z-20 md:mt-[-300px] mt-[-150px] translate-y-[50%]">
         <HeroSlider />
       </div>
-
     </div>
-
-
-
-
   );
 };
 
