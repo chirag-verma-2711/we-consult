@@ -57,7 +57,7 @@ export default function Header() {
               {/* Home */}
               <div className="relative group">
                 <Link href="/" onClick={() => handleLinkClick("/")}>
-                  <button
+                  <div
                     className={`text-lg p-3 flex items-center ${
                       activeLink === "/"
                         ? "text-[#53FFA9]"
@@ -65,14 +65,14 @@ export default function Header() {
                     }`}
                   >
                     Home
-                  </button>
+                  </div>
                 </Link>
               </div>
 
               {/* About Us */}
               <div className="relative group">
                 <Link href="#about" onClick={() => handleLinkClick("#about")}>
-                  <button
+                  <div
                     className={`text-lg p-3 flex items-center ${
                       activeLink === "#about"
                         ? "text-[#53FFA9]"
@@ -80,7 +80,7 @@ export default function Header() {
                     }`}
                   >
                     About Us
-                  </button>
+                  </div>
                 </Link>
               </div>
 
@@ -90,7 +90,7 @@ export default function Header() {
                   href="#category"
                   onClick={() => handleLinkClick("#category")}
                 >
-                  <button
+                  <div
                     className={`text-lg p-3 flex items-center ${
                       activeLink === "#category"
                         ? "text-[#53FFA9]"
@@ -98,43 +98,30 @@ export default function Header() {
                     }`}
                   >
                     Category Experience
-                  </button>
+                  </div>
                 </Link>
               </div>
 
-              {/* Industries */}
+
+
               <div className="relative group">
                 <Link
                   href="#category"
                   onClick={() => handleLinkClick("#category")}
                 >
-                  <button
+                  <div
                     className={`text-lg p-3 flex items-center ${
                       activeLink === "#category"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
                     }`}
                   >
-                    {/* Category Experience */}
-                    <div className="relative group">
-                      <Link
-                        href="#category"
-                        onClick={() => handleLinkClick("#Industries")}
-                      >
-                        <button
-                          className={`text-lg p-3 flex items-center ${
-                            activeLink === "#category"
-                              ? "text-[#53FFA9]"
-                              : "text-[var(--lgreen)]"
-                          }`}
-                        >
-                          Industries
-                        </button>
-                      </Link>
-                    </div>
-                  </button>
+                    Industries
+                  </div>
                 </Link>
               </div>
+
+              
 
               {/* Services */}
               <div className="relative group">
@@ -142,7 +129,7 @@ export default function Header() {
                   href="#service"
                   onClick={() => handleLinkClick("#casestudies")}
                 >
-                  <button
+                  <div
                     className={`text-lg p-3 flex items-center ${
                       activeLink === "#service"
                         ? "text-[#53FFA9]"
@@ -150,7 +137,7 @@ export default function Header() {
                     }`}
                   >
                     Case Studies
-                  </button>
+                  </div>
                 </Link>
               </div>
 
@@ -160,7 +147,7 @@ export default function Header() {
                   href="#contact"
                   onClick={() => handleLinkClick("#contact")}
                 >
-                  <button
+                  <div
                     className={`text-lg p-3 flex items-center ${
                       activeLink === "#contact"
                         ? "text-[#53FFA9]"
@@ -168,7 +155,7 @@ export default function Header() {
                     }`}
                   >
                     Contact Us
-                  </button>
+                  </div>
                 </Link>
               </div>
 
@@ -188,7 +175,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button
+              <div
                 onClick={toggleMenu}
                 className={`flex flex-col justify-center items-center gap-[6px] h-[47px] w-[47px] rounded-full transition-colors duration-300 ${
                   menuOpen ? "bg-[var(--lgreen)]" : "bg-[#ceead51a]"
@@ -204,7 +191,7 @@ export default function Header() {
                     menuOpen ? "w-[30px] bg-[#000]" : "w-[20px] bg-[#ceead5]"
                   }`}
                 ></div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -302,12 +289,12 @@ export default function Header() {
             {/* Modal Box */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl w-[90%] max-w-md p-6 relative border border-white/40">
               {/* Close Button */}
-              <button
+              <div
                 onClick={() => setIsOpen(false)}
                 className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
               >
                 &times;
-              </button>
+              </div>
 
               {/* Title */}
               <h2 className="text-2xl font-semibold text-[#356E54] mb-4 text-center">
@@ -453,12 +440,12 @@ export default function Header() {
                 </div>
 
                 {/* Submit */}
-                <button
+                <div
                   type="submit"
                   className="w-full bg-[#356E54] text-white py-2 rounded-md hover:bg-[#2d5946] transition"
                 >
                   Submit
-                </button>
+                </div>
               </form>
             </div>
           </div>
