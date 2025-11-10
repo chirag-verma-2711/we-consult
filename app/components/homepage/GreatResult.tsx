@@ -1,7 +1,5 @@
 "use client";
 
-import { zodiak } from "@/app/fonts";
-import { satoshi } from "@/app/fonts";
 import Image from "next/image";
 import useInView from "@/app/hooks/useInView";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { satoshi, zodiak } from "@/app/fonts";
 import Image from "next/image";
 
 const MainBanner = () => {

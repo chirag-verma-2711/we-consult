@@ -59,8 +59,8 @@ export default function Header() {
                 <Link href="/" onClick={() => handleLinkClick("/")}>
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "/"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
+                      ? "text-[#53FFA9]"
+                      : "text-[var(--lgreen)]"
                       }`}
                   >
                     Home
@@ -73,8 +73,8 @@ export default function Header() {
                 <Link href="#about" onClick={() => handleLinkClick("#about")}>
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#about"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
+                      ? "text-[#53FFA9]"
+                      : "text-[var(--lgreen)]"
                       }`}
                   >
                     About Us
@@ -90,8 +90,8 @@ export default function Header() {
                 >
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#category"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
+                      ? "text-[#53FFA9]"
+                      : "text-[var(--lgreen)]"
                       }`}
                   >
                     Category Experience
@@ -107,8 +107,8 @@ export default function Header() {
                 >
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#category"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
+                      ? "text-[#53FFA9]"
+                      : "text-[var(--lgreen)]"
                       }`}
                   >
                     Industries
@@ -126,8 +126,8 @@ export default function Header() {
                 >
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#service"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
+                      ? "text-[#53FFA9]"
+                      : "text-[var(--lgreen)]"
                       }`}
                   >
                     Case Studies
@@ -143,8 +143,8 @@ export default function Header() {
                 >
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#contact"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
+                      ? "text-[#53FFA9]"
+                      : "text-[var(--lgreen)]"
                       }`}
                   >
                     Contact Us

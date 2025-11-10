@@ -94,9 +94,8 @@ export default function Carousel() {
           <span
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer transition ${
-              current === index ? "bg-white" : "bg-white/50"
-            }`}
+            className={`w-3 h-3 rounded-full cursor-pointer transition ${current === index ? "bg-white" : "bg-white/50"
+              }`}
           ></span>
         ))}
       </div>

@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { zodiak, satoshi } from "@/app/fonts";
 import useInView from "@/app/hooks/useInView";
 
 export default function ScrumPage() {

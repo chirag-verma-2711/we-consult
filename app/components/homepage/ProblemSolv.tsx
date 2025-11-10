@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { zodiak } from "@/app/fonts";
-import { satoshi } from "@/app/fonts";
 import useInView from "@/app/hooks/useInView";
 
 const ProblemSolv = () => {

@@ -1,9 +1,6 @@
 "use client";
 
 import React from "react";
-// import Image from "next/image";
-import { zodiak } from "@/app/fonts";
-import Image from "next/image";
 import useInView from "@/app/hooks/useInView";
 
 const ServicesMap = () => {

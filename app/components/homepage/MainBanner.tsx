@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { satoshi, zodiak } from "@/app/fonts";
-import Image from "next/image";
 import HeroSlider from "./heroslider/HeroSlider";
 import useInView from "@/app/hooks/useInView";
 
@@ -74,7 +72,7 @@ const MainBanner: React.FC = () => {
             className={`fade-up ${isVisible ? "show" : ""} heading-home mb-4`}
           >
             <p
-              className={`${satoshi.className} subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]`}
+              className="subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]"
             >
               From Insight to Impact
             </p>

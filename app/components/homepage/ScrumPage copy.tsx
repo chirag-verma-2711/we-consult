@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { zodiak, satoshi } from "@/app/fonts";
 export default function ScrumPage() {
   return (
     <section className="w-full bg-[var(--lgreen)] py-16">
