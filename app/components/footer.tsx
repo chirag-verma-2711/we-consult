@@ -1,127 +1,180 @@
 "use client";
-import Image from "next/image";
+import { useEffect } from "react";
 import Link from "next/link";
-import { satoshi } from "../fonts";
 
 export default function Footer() {
-    return (
-        <footer className={`bg-[#05201d] text-gray-300 ${satoshi.className}`}>
-            <div className="max-w-7xl mx-auto px-4 pt-20">
+  useEffect(() => {
+    const btn = document.getElementById("scrollTopBtn");
 
-                {/* <div className="box-news flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6 p-8 border-b border-gray-700">
-                    
-                    <div>
-                        <Image
-                            src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg"
-                            alt="We Consult Logo"
-                            width={300}
-                            height={50}
-                            className="h-8"
-                        />
-                    </div>
+    const toggleVisibility = () => {
+      if (window.scrollY > 200) {
+        btn?.classList.remove("opacity-0", "pointer-events-none");
+        btn?.classList.add("opacity-60");
+      } else {
+        btn?.classList.add("opacity-0", "pointer-events-none");
+        btn?.classList.remove("opacity-60");
+      }
+    };
 
-                    <div className=" flex w-full md:w-auto items-center bg-[#1B3233] rounded-full overflow-hidden border border-gray-600">
-                        <input
-                            type="email"
-                            placeholder="Your email"
-                            className="flex-1 px-4 py-2 bg-transparent text-gray-200 placeholder-gray-400 focus:outline-none"
-                        />
-                        <button className="ebutton bg-[#cde8d9] text-[#05201d] font-medium px-6 py-2 hover:bg-[#bde0cc] transition">
-                            Subscribe
-                        </button>
-                    </div>
-                </div> */}
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
 
-                <div className="box-news flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6 p-8 border-b border-gray-700">
-                    {/* Logo */}
-                    <div>
-                        {/* <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
-                         */}
-                         <h2 className="text-2xl font-semibold text-[var(--lgreen)]">Subscribe to our newsletter!</h2>
-                    </div>
-                    {/* Newsletter */}
-                    <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:bg-[#1B3233] md:rounded-full md:overflow-hidden md:border md:border-gray-600 gap-4">
-                        {/* Input */}
-                        <input
-                            type="email"
-                            placeholder="Your email"
-                            className="w-full px-4 py-4 md:px-4 md:py-2 bg-[#1B3233] text-gray-200 placeholder-gray-400 focus:outline-none rounded-[50px] md:rounded-none text-center md:text-left"
-                        />
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-                        {/* Button */}
-                        <button className="ebutton bg-[#cde8d9] text-[#05201d] font-medium px-6 py-4 md:px-6 md:py-2 hover:bg-[#bde0cc] transition rounded-[50px] w-full md:w-auto md:rounded-none">
-                            Subscribe
-                        </button>
-                    </div> </div>
+  return (
+    <>
+      <footer className="bg-[var(--dgreen)] text-white pt-8">
+        <div className="container py-16 px-14 mx-auto flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6border-b border-gray-700">
+          {/* Logo */}
+          <div>
+            {/* <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
+             */}
+            <h2 className="text-2xl font-semibold text-[var(--lgreen)]">
+              Subscribe to our newsletter!
+            </h2>
+          </div>
+          {/* Newsletter */}
+          <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:bg-[#1B3233] md:rounded-full md:overflow-hidden md:border md:border-gray-600 gap-4">
+            {/* Input */}
+            <input
+              type="email"
+              placeholder="Your email"
+              className="w-full px-4 py-4 md:px-4 md:py-2 bg-[#1B3233] text-gray-200 placeholder-gray-400 focus:outline-none rounded-[50px] md:rounded-none text-center md:text-left"
+            />
 
-                {/* Middle: Left Text + Links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
-                    {/* Left Content */}
-                    <div className="flex flex-col items-start">
-                        <p className="text-lg mb-6 leading-relaxed text-[#d3f9d8] max-w-md">
-                            With life long relationship and support of science <br />
-                            we help companies grow in an unimaginable speed
-                        </p>
-                        <button className="bg-[#cde8d9] text-[#05201d]  px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300">
-                            Buy this template – $129
-                        </button>
-                    </div>
+            {/* Button */}
+            <button className="ebutton bg-[#cde8d9] text-[#05201d] font-medium px-6 py-4 md:px-6 md:py-2 hover:bg-[#bde0cc] transition rounded-[50px] w-full md:w-auto md:rounded-none">
+              Subscribe
+            </button>
+          </div>
+        </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-[#CEEAD5] ">
+        {/* Top Section */}
+        <div
+          id="contact"
+          className=" container mx-auto px-4   py-10 grid grid-cols-1 md:grid-cols-4 gap-10"
+        >
+          {/* Logo */}
+          <div className="flex flex-col items-start">
+            <img
+              src="/assests/header/images/leapbridgelogo.svg"
+              alt="Leap Bridge Consulting Logo"
+              width={180}
+              height={60}
+              className="mb-4"
+            />
+          </div>
 
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">Homepages</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">Home A</Link></li>
-                                <li><Link href="#" className="hover:underline">Home B</Link></li>
-                                <li><Link href="#" className="hover:underline">Home C</Link></li>
-                            </ul>
-                        </div>
+          {/* Navigation Links */}
+          <div className="flex flex-col space-y-2 md:border-r border-dotted border-[#356E54]">
+            <Link href="/" className="hover:text-[#9BE3B3] transition">
+              Home
+            </Link>
+            <Link href="#about" className="hover:text-[#9BE3B3] transition">
+              About Us
+            </Link>
+            <Link href="#category" className="hover:text-[#9BE3B3] transition">
+              Category Experience
+            </Link>
+            <Link href="#service" className="hover:text-[#9BE3B3] transition">
+              Industries
+            </Link>
+            <Link href="#service" className="hover:text-[#9BE3B3] transition">
+              Case Studies
+            </Link>
+            <Link href="#contact" className="hover:text-[#9BE3B3] transition">
+              Contact Us
+            </Link>
+          </div>
 
-                        {/* About us */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">About us</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">About A</Link></li>
-                                <li><Link href="#" className="hover:underline">About B</Link></li>
-                                <li><Link href="#" className="hover:underline">About C</Link></li>
-                            </ul>
-                        </div>
+          {/* Policies */}
+          <div className="flex flex-col space-y-2 md:border-r border-dotted border-[#356E54]">
+            <Link href="" className="hover:text-[#9BE3B3] transition">
+              Privacy Policy
+            </Link>
+            <Link href="" className="hover:text-[#9BE3B3] transition">
+              Terms & Conditions
+            </Link>
+            <Link href="" className="hover:text-[#9BE3B3] transition">
+              Cookie Policy
+            </Link>
+          </div>
 
-                        {/* Contact */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">Contact</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">Contact A</Link></li>
-                                <li><Link href="#" className="hover:underline">Contact B</Link></li>
-                                <li><Link href="#" className="hover:underline">Contact C</Link></li>
-                            </ul>
-                        </div>
-
-                        {/* Other Pages */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-[#CEEAD5]">Other pages</h2>
-                            <ul className="space-y-3">
-                                <li><Link href="#" className="hover:underline">Careers</Link></li>
-                                <li><Link href="#" className="hover:underline">Case studies</Link></li>
-                                <li><Link href="#" className="hover:underline">Blog</Link></li>
-                                <li><Link href="#" className="hover:underline">Pricing</Link></li>
-                                <li><Link href="#" className="hover:underline">Legal</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Bottom note */}
-                <div className="border-t border-gray-700 py-6 text-sm flex flex-col sm:flex-row justify-between items-center">
-                    <p className="text-[#CEEAD5]">
-                       Copyright © 2025 Leap Bridge Consulting. All rights reserved.
-                    </p>
-                    <Link href="#" className="underline hover:text-white mt-3 sm:mt-0">
-                        See all templates
-                    </Link>
-                </div>
+          {/* Contact + Social */}
+          <div className="space-y-3">
+            <a
+              href="tel:9167063112"
+              className="text-sm hover:text-[#9BE3B3] transition"
+            >
+              +91-91670 63112
+            </a>{" "}
+            <br />
+            <a
+              href="tel:9769100915"
+              className="text-sm hover:text-[#9BE3B3] transition"
+            >
+              +91 97691 00915
+            </a>{" "}
+            <br />
+            <a
+              href="mailto:connect@leapbridgeconsulting.com"
+              className="text-sm hover:text-[#9BE3B3] transition"
+            >
+              connect@leapbridgeconsulting.com
+            </a>
+            <div className="flex space-x-3 mt-2">
+              <Link href="https://www.linkedin.com" target="_blank">
+                <img
+                  src="/assests/header/images/linkdin.svg"
+                  alt="LinkedIn"
+                  width={28}
+                  height={28}
+                  className="hover:opacity-80 transition"
+                />
+              </Link>
+              <Link href="https://wa.me/919769100915" target="_blank">
+                <img
+                  src="/assests/header/images/whtsapp.svg"
+                  alt="WhatsApp"
+                  width={28}
+                  height={28}
+                  className="hover:opacity-80 transition"
+                />
+              </Link>
             </div>
-        </footer>
-    );
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="bg-[#147e5d] text-center py-3 text-sm text-white">
+          Copyright © 2025 Leap Bridge Consulting. All rights reserved.
+        </div>
+      </footer>
+
+      {/* Scroll to Top Button */}
+      <button
+        id="scrollTopBtn"
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 bg-white border-2 border-[#234C3A] text-[#234C3A] rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-[#9BE3B3] hover:text-[#18392B] transition opacity-0 pointer-events-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2.5}
+          stroke="currentColor"
+          className="w-5 h-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </button>
+    </>
+  );
 }

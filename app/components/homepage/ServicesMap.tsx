@@ -1,13 +1,21 @@
+"use client";
+
 import React from "react";
 // import Image from "next/image";
 import { zodiak } from "@/app/fonts";
 import Image from "next/image";
+import useInView from "@/app/hooks/useInView";
 
 const ServicesMap = () => {
+  const { ref, isVisible } = useInView({ threshold: 0.2 });
   return (
-    <section className="relative w-full flex flex-col items-center justify-center bg-[#daebe3] bg-[url('/assests/header/images/dotted_bg.png')] bg-no-repeat md:bg-[position:50%_-150px] bg-[position:50%_50px] md:bg-[length:67%] bg-[length:100%]">
-      <div className="relative z-10 max-w-4xl pb-[100px] pt-[150px] md:px-[100px] px-[36px] text-center ">
-      {/* E:\my-app-old\public\assests\header\images\dotted_bg.png */}
+    <>
+      <div
+        ref={ref}
+        className={`fade-up ${
+          isVisible ? "show" : ""
+        } relative z-10 max-w-4xl pb-[100px] pt-[150px] md:px-[100px] px-[36px] text-center`}
+      >
         <h2 className="text-4xl font-semibold mb-1 text-[var(--dgreen)]">
           What do we do ?
         </h2>
@@ -22,100 +30,7 @@ const ServicesMap = () => {
           deliver measurable, lasting growth.
         </p>
       </div>
-
-      <div className="pb-[50px] w-full container">
-        <h2 className="text-4xl font-semibold text-[var(--dgreen)] text-center mb-[30px]">
-          Exposure Across Iconic Brands
-        </h2>
-        <div className="flex flex-wrap  justify-between w-full  *:lg:px-12 *:md:px-10 *:sm:px-8 *:px-6 *:py-5 *:w-1/2 *:lg:w-1/6 *:md:w-1/4">
-          <Image
-            src="/assests/header/logoimage/abbot.png"
-            alt="Logo 1"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/Cipla_logo.png"
-            alt="Logo 2"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/DANONE_LOGO_HORIZONTAL.png"
-            alt="Logo 3"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/emami.png"
-            alt="Logo 4"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/godrej.png"
-            alt="Logo 5"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/hershey_company-logo_brandlogos.net_pcliv.png"
-            alt="Logo 5"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-
-          <Image
-            src="/assests/header/logoimage/mondelez-international-logo.png"
-            alt="Logo 1"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/Marico_Logo.png"
-            alt="Logo 2"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/nobel-hygine.png"
-            alt="Logo 3"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/P&G-Logo.png"
-            alt="Logo 4"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/parle-Agro.png"
-            alt="Logo 5"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-          <Image
-            src="/assests/header/logoimage/Reckitt-Benckiser-logo.png"
-            alt="Logo 5"
-            width={100}
-            height={60}
-            className="h-auto object-contain"
-          />
-        </div>
-      </div>
-    </section>
+    </>
   );
 };
 

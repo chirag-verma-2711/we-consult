@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import { satoshi, zodiak } from "@/app/fonts";
 import Image from "next/image";
 import HeroSlider from "./heroslider/HeroSlider";
+import useInView from "@/app/hooks/useInView";
 
 const MainBanner: React.FC = () => {
+  const { ref, isVisible } = useInView({ threshold: 0.2 });
   // useEffect(() => {
   //   import("scrollreveal").then((ScrollRevealModule) => {
   //     const ScrollReveal = ScrollRevealModule.default;
@@ -40,13 +44,35 @@ const MainBanner: React.FC = () => {
       <div className="relative z-10 text-white">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="container mx-auto px-4">
-            <div className="flex space-x-3 justify-center my-12">
+            {/* <div className="flex space-x-3 justify-center my-12">
               <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
               <span className="w-[52px] h-8 rounded-[40px] bg-[#CEEAD5]"></span>
               <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
+            </div> */}
+            
+            <div ref={ref} className="flex space-x-3 items-center justify-center my-12 h-[30px]">
+              <span
+                className={`bar w-[30px] rounded-full bg-[#CEEAD54D] ${isVisible ? "animate" : ""}`}
+                style={{ transitionDelay: "0.6s" }}
+              ></span>
+
+              <span
+                className={`bar w-[52px] rounded-[40px] bg-[#CEEAD5] ${isVisible ? "animate" : ""}`}
+                style={{ transitionDelay: "0.8s" }}   // slight stagger
+              ></span>
+
+              <span
+                className={`bar w-[30px] rounded-full bg-[#CEEAD54D] ${isVisible ? "animate" : ""}`}
+                style={{ transitionDelay: "1s" }}   // delayed third
+              ></span>
             </div>
+
+
           </div>
-          <div className="heading-home mb-4">
+          <div
+            ref={ref}
+            className={`fade-up ${isVisible ? "show" : ""} heading-home mb-4`}
+          >
             <p
               className={`${satoshi.className} subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]`}
             >
@@ -68,7 +94,12 @@ const MainBanner: React.FC = () => {
           </div> */}
         </div>
       </div>
-      <div className="relative z-20 md:mt-[-300px] mt-[-150px] translate-y-[50%]">
+      <div
+        ref={ref}
+        className={`fade-up ${
+          isVisible ? "show" : ""
+        } relative z-20 md:mt-[-300px] mt-[-150px] translate-y-[50%]`}
+      >
         <HeroSlider />
       </div>
     </div>

@@ -5,8 +5,6 @@ import Link from "next/link";
 import { satoshi } from "../fonts";
 import AppointmentButton from "./AppointmentButton";
 
-
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
@@ -118,22 +116,22 @@ export default function Header() {
                     }`}
                   >
                     {/* Category Experience */}
-              <div className="relative group">
-                <Link
-                  href="#category"
-                  onClick={() => handleLinkClick("#Industries")}
-                >
-                  <button
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "#category"
-                        ? "text-[#53FFA9]"
-                        : "text-[var(--lgreen)]"
-                    }`}
-                  >
-                    Industries 
-                  </button>
-                </Link>
-              </div>
+                    <div className="relative group">
+                      <Link
+                        href="#category"
+                        onClick={() => handleLinkClick("#Industries")}
+                      >
+                        <button
+                          className={`text-lg p-3 flex items-center ${
+                            activeLink === "#category"
+                              ? "text-[#53FFA9]"
+                              : "text-[var(--lgreen)]"
+                          }`}
+                        >
+                          Industries
+                        </button>
+                      </Link>
+                    </div>
                   </button>
                 </Link>
               </div>
@@ -269,7 +267,6 @@ export default function Header() {
               </Link>
             </summary>
           </details>
-
 
           {/* Contact Us */}
           <details className="group py-[16px] px-[20px] mb-0 relative">

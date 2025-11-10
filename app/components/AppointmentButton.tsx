@@ -45,7 +45,6 @@ export default function AppointmentButton() {
       {isOpen && (
         <div className="fixed inset-0 bg-[#00000040] backdrop-blur-md flex justify-center items-center z-50">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl w-[90%] max-w-md p-6 relative border border-white/40">
-            
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
@@ -59,7 +58,9 @@ export default function AppointmentButton() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Name</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -69,7 +70,9 @@ export default function AppointmentButton() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700">Email</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -79,7 +82,9 @@ export default function AppointmentButton() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700">Mobile Number</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Mobile Number
+                </label>
                 <input
                   type="tel"
                   name="mobile"
@@ -90,7 +95,9 @@ export default function AppointmentButton() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700">Company Name</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Company Name
+                </label>
                 <input
                   type="text"
                   name="company"
@@ -101,7 +108,9 @@ export default function AppointmentButton() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="flex-1">
-                  <label className="block text-sm font-medium text-gray-700">Date</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Date
+                  </label>
                   <input
                     type="date"
                     name="date"
@@ -112,7 +121,9 @@ export default function AppointmentButton() {
                 </div>
 
                 <div className="flex-1">
-                  <label className="block text-sm font-medium text-gray-700">Time</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Time
+                  </label>
                   <input
                     type="time"
                     name="time"
@@ -124,10 +135,17 @@ export default function AppointmentButton() {
               </div>
 
               <div className="flex items-center gap-2">
-                <input type="checkbox" name="agree" required className="h-4 w-4" />
+                <input
+                  type="checkbox"
+                  name="agree"
+                  required
+                  className="h-4 w-4"
+                />
                 <label className="text-sm text-gray-700">
                   I agree to the{" "}
-                  <a href="#" className="text-[var(--dgreen)] underline">Terms and Conditions</a>
+                  <a href="#" className="text-[var(--dgreen)] underline">
+                    Terms and Conditions
+                  </a>
                 </label>
               </div>
 
@@ -138,7 +156,6 @@ export default function AppointmentButton() {
                 Submit
               </button>
             </form>
-
           </div>
         </div>
       )}
