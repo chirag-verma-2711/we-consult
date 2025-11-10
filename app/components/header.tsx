@@ -58,11 +58,10 @@ export default function Header() {
               <div className="relative group">
                 <Link href="/" onClick={() => handleLinkClick("/")}>
                   <div
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "/"
+                    className={`text-lg p-3 flex items-center ${activeLink === "/"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
-                    }`}
+                      }`}
                   >
                     Home
                   </div>
@@ -73,11 +72,10 @@ export default function Header() {
               <div className="relative group">
                 <Link href="#about" onClick={() => handleLinkClick("#about")}>
                   <div
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "#about"
+                    className={`text-lg p-3 flex items-center ${activeLink === "#about"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
-                    }`}
+                      }`}
                   >
                     About Us
                   </div>
@@ -91,37 +89,34 @@ export default function Header() {
                   onClick={() => handleLinkClick("#category")}
                 >
                   <div
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "#category"
+                    className={`text-lg p-3 flex items-center ${activeLink === "#category"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
-                    }`}
+                      }`}
                   >
                     Category Experience
                   </div>
                 </Link>
               </div>
 
-
-
+              {/* Category Experience */}
               <div className="relative group">
                 <Link
                   href="#category"
                   onClick={() => handleLinkClick("#category")}
                 >
                   <div
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "#category"
+                    className={`text-lg p-3 flex items-center ${activeLink === "#category"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
-                    }`}
+                      }`}
                   >
                     Industries
                   </div>
                 </Link>
               </div>
 
-              
+
 
               {/* Services */}
               <div className="relative group">
@@ -130,11 +125,10 @@ export default function Header() {
                   onClick={() => handleLinkClick("#casestudies")}
                 >
                   <div
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "#service"
+                    className={`text-lg p-3 flex items-center ${activeLink === "#service"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
-                    }`}
+                      }`}
                   >
                     Case Studies
                   </div>
@@ -148,11 +142,10 @@ export default function Header() {
                   onClick={() => handleLinkClick("#contact")}
                 >
                   <div
-                    className={`text-lg p-3 flex items-center ${
-                      activeLink === "#contact"
+                    className={`text-lg p-3 flex items-center ${activeLink === "#contact"
                         ? "text-[#53FFA9]"
                         : "text-[var(--lgreen)]"
-                    }`}
+                      }`}
                   >
                     Contact Us
                   </div>
@@ -177,19 +170,16 @@ export default function Header() {
             <div className="md:hidden">
               <div
                 onClick={toggleMenu}
-                className={`flex flex-col justify-center items-center gap-[6px] h-[47px] w-[47px] rounded-full transition-colors duration-300 ${
-                  menuOpen ? "bg-[var(--lgreen)]" : "bg-[#ceead51a]"
-                }`}
+                className={`flex flex-col justify-center items-center gap-[6px] h-[47px] w-[47px] rounded-full transition-colors duration-300 ${menuOpen ? "bg-[var(--lgreen)]" : "bg-[#ceead51a]"
+                  }`}
               >
                 <div
-                  className={`h-[2px] transition-all duration-300 ${
-                    menuOpen ? "w-[20px] bg-[#000]" : "w-[30px] bg-[#ceead5]"
-                  }`}
+                  className={`h-[2px] transition-all duration-300 ${menuOpen ? "w-[20px] bg-[#000]" : "w-[30px] bg-[#ceead5]"
+                    }`}
                 ></div>
                 <div
-                  className={`h-[2px] transition-all duration-300 ${
-                    menuOpen ? "w-[30px] bg-[#000]" : "w-[20px] bg-[#ceead5]"
-                  }`}
+                  className={`h-[2px] transition-all duration-300 ${menuOpen ? "w-[30px] bg-[#000]" : "w-[20px] bg-[#ceead5]"
+                    }`}
                 ></div>
               </div>
             </div>
@@ -199,9 +189,8 @@ export default function Header() {
         {/* Mobile Menu */}
         <div
           id="mobile-menu"
-          className={`md:hidden py-[25px] px-[45px] space-y-2 absolute bg-[var(--dgreen)] w-full top-[82px] max-h-[calc(100vh-82px)] overflow-y-auto transition-all duration-300 ${
-            menuOpen ? "block" : "hidden"
-          }`}
+          className={`md:hidden py-[25px] px-[45px] space-y-2 absolute bg-[var(--dgreen)] w-full top-[82px] max-h-[calc(100vh-82px)] overflow-y-auto transition-all duration-300 ${menuOpen ? "block" : "hidden"
+            }`}
         >
           {/* Home */}
           <details className="group py-[16px] px-[20px] mb-0 relative">
@@ -440,12 +429,12 @@ export default function Header() {
                 </div>
 
                 {/* Submit */}
-                <div
+                <button
                   type="submit"
                   className="w-full bg-[#356E54] text-white py-2 rounded-md hover:bg-[#2d5946] transition"
                 >
                   Submit
-                </div>
+                </button>
               </form>
             </div>
           </div>
