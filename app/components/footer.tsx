@@ -55,10 +55,10 @@ export default function Footer() {
         {/* Top Section */}
         <div
           id="contact"
-          className=" container mx-auto px-4   py-10 grid grid-cols-1 md:grid-cols-4 gap-10"
+          className=" container mx-auto px-4   py-10 grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-10"
         >
           {/* Logo */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start sm:border-r lg:border-r-0 border-dotted border-[#356E54]">
             <img
               src="/assests/header/images/leapbridgelogo.svg"
               alt="Leap Bridge Consulting Logo"
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-col space-y-2 md:border-r border-dotted border-[#356E54]">
+          <div className="flex flex-col space-y-2 lg:border-r  border-dotted border-[#356E54]">
             <Link href="/" className="hover:text-[#9BE3B3] transition">
               Home
             </Link>
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
 
           {/* Policies */}
-          <div className="flex flex-col space-y-2 md:border-r border-dotted border-[#356E54]">
+          <div className="flex flex-col space-y-2 sm:border-r border-dotted border-[#356E54]">
             <Link href="" className="hover:text-[#9BE3B3] transition">
               Privacy Policy
             </Link>

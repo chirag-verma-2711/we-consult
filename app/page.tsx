@@ -5,7 +5,7 @@ import ClientList from "./components/homepage/ClientList";
 import ProblemSolv from "./components/homepage/ProblemSolv";
 import GreatResult from "./components/homepage/GreatResult";
 import ScrumPage from "./components/homepage/ScrumPage";
-import ConsultationCTA from "./components/homepage/ConsultationCTA";
+// import ConsultationCTA from "./components/homepage/ConsultationCTA";
 import GoodInsights from "./components/homepage/GoodInsights";
 import "./globals.css";
 
@@ -23,7 +23,7 @@ export default function Home() {
       <ProblemSolv />
       <GreatResult />
       <ScrumPage />
-      <ConsultationCTA />
+      {/* <ConsultationCTA /> */}
       <GoodInsights />
     </>
   );
