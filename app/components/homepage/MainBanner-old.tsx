@@ -17,7 +17,7 @@ const MainBanner = () => {
         </h1>
         <p className="subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]">
           The most professional consulting out, there changing the realm
-          business and digital
+          business and digital.
         </p>
       </div>
       <div className="mainbanner max-w-[1100px] w-full">
