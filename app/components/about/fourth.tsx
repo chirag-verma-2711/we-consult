@@ -19,17 +19,60 @@ export default function Fourth() {
                 Jatin Panchal and Vinod Rao bring over five decades of combined leadership across diverse business environments. They blend strategic clarity with practical, on-ground execution, helping organizations strengthen their commercial engines, build capable teams, and unlock scalable growth.
               </p>
             </div>
-            
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-[var(--lgreen)] rounded-2xl p-8">
-                <div className="grid sm:grid-cols-[25%_75%]">
-                  <div>
-                    <Image src="/assests/header/images/Jatin-Panchal.jpg" className="w-full h-auto" width={1000} height={1000} alt="" />
-                  </div>
-                  <div></div>
-                </div>
+            <div className="max-w-[1350px] mx-auto mt-20">
 
+              <div className="bg-[var(--lgreen)] relative rounded-2xl p-[50px] mb-[140px]">
+                <div className="flex gap-10">
+                  <div className="max-w-[300px] w-full">
+                    <Image src="/assests/header/images/Jatin-Panchal.jpg" className="w-full h-auto rounded-2xl" width={1000} height={1000} alt="" />
+                  </div>
+                  <div className="w-full">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-[var(--dgreen)]">Jatin Panchal</h3>
+                      <p className="font-semibold text-[var(--dgreen)]">Founder & Partner</p>
+                      <p className="text-[18px] text-[var(--dgreen)] opacity-95">MBA: SIMSR Exec MBA: INSEAD, France</p>
+                    </div>
+                    <div className="h-[1px] bg-black max-w-[350px] my-2"></div>
+                    <div className="text-[25px] font-thin max-w-[880px]">
+                      A commercial transformation leader with over 25 years of experience in FMCG & consumer healthcare, driving growth, reach, & sales excellence across channels. Jatin has successfully led the transition of healthcare & pharma portfolios into consumer-facing FMCG businesses. Expertise in building new businesses, including ecom for FMCG firms, he blends analytical precision with people-centric leadership. He excels in designing transformative go-to-market strategies, building capable teams, & unlocking business momentum through insight-led execution.
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute left-0 -bottom-[105px] text-white py-6 px-[50px] bg-[#859d8a] w-fit rounded-tr-[20px] rounded-br-[30px] rounded-bl-[60px] text-[20px]">
+                  <p><strong>Abbot Nutrition</strong> - Commercial Leader</p>
+                  <p><strong>Danone Nutrition</strong> - Director sales</p>
+                  <p><strong>Godrej Consumer Products Ltd.</strong> - Head - Sales Development</p>
+                </div>
               </div>
+
+
+              <div className="bg-[var(--lgreen)] relative rounded-2xl p-[50px] mb-[140px]">
+                <div className="flex gap-10">
+                  <div className="max-w-[300px] w-full">
+                    <Image src="/assests/header/images/Vinod-Rao.jpg" className="w-full h-auto rounded-2xl" width={1000} height={1000} alt="" />
+                  </div>
+                  <div className="w-full">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-[var(--dgreen)]">Vinod Rao</h3>
+                      <p className="font-semibold text-[var(--dgreen)]">Founder & Partner</p>
+                      <p className="text-[18px] text-[var(--dgreen)] opacity-95">MBA: JBIMS</p>
+                    </div>
+                    <div className="h-[1px] bg-black max-w-[350px] my-2"></div>
+                    <div className="text-[25px] font-thin max-w-[880px]">
+                      A seasoned P&L leader with over 30 years of experience across FMCG, healthcare, and retail banking. Vinod has led business turnarounds and large scale distribution expansions, earning a reputation for translating strategy into seamless execution. He brings deep expertise in sales transformation, category growth, channel management, and trade excellence, along with hands-on experience in cold chain infrastructure and operating within both family-run and PE-backed promoter environments.
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute left-0 -bottom-[105px] text-white py-6 px-[50px] bg-[#859d8a] w-fit rounded-tr-[20px] rounded-br-[30px] rounded-bl-[60px] text-[20px]">
+                  <p><strong>Nobel Hygiene Pvt Ltd</strong> - Chief Commercial Officer</p>
+                  <p><strong>Emami Ltd.</strong> - President Sales</p>
+                  <p><strong>Hershey India</strong> - Director Sales</p>
+                </div>
+              </div>
+
+
+
+
             </div>
 
 

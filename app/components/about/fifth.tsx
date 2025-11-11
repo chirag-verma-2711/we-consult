@@ -1,0 +1,59 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import useInView from "@/app/hooks/useInView";
+import Link from "next/link";
+
+export default function Fifth() {
+  const heading = useInView({ threshold: 0.2 });
+  return (
+    <>
+      <section>
+        <div className="bg-[#d9e6dc]">
+          <div className="container mx-auto px-5 py-12">
+            <div className="grid lg:grid-cols-[40%_60%] grid-cols-1 gap-16">
+              
+              <div className="h-full flex flex-col justify-center">
+                <h2
+                  ref={heading.ref}
+                  className={`fade-up ${
+                    heading.isVisible ? "show" : ""
+                  } text-[60px] font-semibold mb-5 text-[var(--dgreen)] leading-18`}
+                >
+                  Our Approach to Create Value
+
+                </h2>
+                <p
+                  ref={heading.ref}
+                  className={`fade-up ${
+                    heading.isVisible ? "show" : ""
+                  } text-[25px] max-w-[550px]`}
+                >
+                  We operate on a fractional leadership and project-based model, enabling clients to access senior industry expertise without long-term overheads.<br />
+                  <br />
+                  At LeapBridge, we believe in bridging the gap between Organisation Strategy & On ground Execution. Our approach blends data-backed analytics with field-tested pragmatism, ensuring every recommendation can be executed and sustained on ground.
+                </p>
+
+                <Link href="/" className="text-[23px] text-white mt-6 bg-[var(--dgreen)] w-fit px-16 py-2 rounded-2xl transition ease-in-out hover:opacity-90">Let's talk</Link>
+              </div>
+
+              <div
+                ref={heading.ref}
+                className={`fade-up ${heading.isVisible ? "show" : ""} `}
+              >
+                <Image
+                  src="/assests/header/images/digram-about.png"
+                  className="w-full h-auto"
+                  width={1000}
+                  height={1000}
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

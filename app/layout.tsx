@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
-import { satoshi, zodiak } from "./fonts";
+// import { satoshi, zodiak } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} ${zodiak.variable}`}>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

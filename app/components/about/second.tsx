@@ -37,7 +37,7 @@ export default function Second() {
                   ref={heading.ref}
                   className={`fade-up ${
                     heading.isVisible ? "show" : ""
-                  } text-[24px]`}
+                  } text-[22px]`}
                 >
                   Founded by Jatin Panchal and Vinod Rao, LeapBridge Consulting
                   brings together over five decades of leadership across FMCG
