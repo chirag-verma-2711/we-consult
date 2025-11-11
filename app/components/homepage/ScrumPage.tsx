@@ -8,7 +8,7 @@ export default function ScrumPage() {
       <div className="container mx-auto px-6 text-[#1B3233]">
         {/* Title */}
         <h2 className="text-7xl font-normal text-center mb-8">
-          Let's Talk
+          Let&apos;s Talk
         </h2>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -30,7 +30,10 @@ export default function ScrumPage() {
             <div className="h-[1px] bg-[#1b32334d] my-10" />
 
             <div className="flex flex-col gap-4">
-              <a href="tel:+91-91670 63112" className="flex items-center gap-3 text-lg">
+              <a
+                href="tel:+91-91670 63112"
+                className="flex items-center gap-3 text-lg"
+              >
                 <Image
                   src="https://cdn.prod.website-files.com/665d580d007277205ba1329a/665d580d007277205ba13312_phone.svg"
                   alt="Phone Icon"
@@ -40,7 +43,10 @@ export default function ScrumPage() {
                 <div>+91-91670 63112</div>
               </a>
 
-              <a href="tel:+91 97691 00915" className="flex items-center gap-3 text-lg">
+              <a
+                href="tel:+91 97691 00915"
+                className="flex items-center gap-3 text-lg"
+              >
                 <Image
                   src="https://cdn.prod.website-files.com/665d580d007277205ba1329a/665d580d007277205ba13312_phone.svg"
                   alt="Phone Icon"
@@ -50,7 +56,10 @@ export default function ScrumPage() {
                 <div>+91 97691 00915</div>
               </a>
 
-              <a href="mailto:connect@leapbridgeconsulting.com" className="flex items-center gap-3 text-lg">
+              <a
+                href="mailto:connect@leapbridgeconsulting.com"
+                className="flex items-center gap-3 text-lg"
+              >
                 <Image
                   src="https://cdn.prod.website-files.com/665d580d007277205ba1329a/665d580d007277205ba13313_send-mail.svg"
                   alt="Mail Icon"
@@ -97,7 +106,7 @@ export default function ScrumPage() {
                     className="h-4 w-4 accent-[#1B3233]"
                     required
                   />
-                  <span>I agree to the Terms & Privacy Policy</span>
+                  <span>I agree to the Terms &amp; Privacy Policy</span>
                 </label>
 
                 <button

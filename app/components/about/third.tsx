@@ -2,11 +2,11 @@
 
 import React from "react";
 // import Image from "next/image";
-import useInView from "@/app/hooks/useInView";
+// import useInView from "@/app/hooks/useInView";
 import Thirdslider from "./thirdslider/Thirdslider";
 
 export default function Third() {
-  const heading = useInView({ threshold: 0.2 });
+  // const heading = useInView({ threshold: 0.2 });
   return (
     <>
       <section>

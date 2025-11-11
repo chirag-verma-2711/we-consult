@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Fifth() {
   const heading = useInView({ threshold: 0.2 });
+
   return (
     <>
       <section>
@@ -22,25 +23,37 @@ export default function Fifth() {
                   } text-[60px] font-semibold mb-5 text-[var(--dgreen)] leading-18`}
                 >
                   Our Approach to Create Value
-
                 </h2>
+
                 <p
                   ref={heading.ref}
                   className={`fade-up ${
                     heading.isVisible ? "show" : ""
                   } text-[25px] max-w-[550px]`}
                 >
-                  We operate on a fractional leadership and project-based model, enabling clients to access senior industry expertise without long-term overheads.<br />
+                  We operate on a fractional leadership and project-based model,
+                  enabling clients to access senior industry expertise without
+                  long-term overheads.
                   <br />
-                  At LeapBridge, we believe in bridging the gap between Organisation Strategy & On ground Execution. Our approach blends data-backed analytics with field-tested pragmatism, ensuring every recommendation can be executed and sustained on ground.
+                  <br />
+                  At LeapBridge, we believe in bridging the gap between
+                  Organisation Strategy &amp; On ground Execution. Our approach
+                  blends data-backed analytics with field-tested pragmatism,
+                  ensuring every recommendation can be executed and sustained on
+                  ground.
                 </p>
 
-                <Link href="/" className="text-[23px] text-white mt-6 bg-[var(--dgreen)] w-fit px-16 py-2 rounded-2xl transition ease-in-out hover:opacity-90">Let's talk</Link>
+                <Link
+                  href="/"
+                  className="text-[23px] text-white mt-6 bg-[var(--dgreen)] w-fit px-16 py-2 rounded-2xl transition ease-in-out hover:opacity-90"
+                >
+                  Let&apos;s talk
+                </Link>
               </div>
 
               <div
                 ref={heading.ref}
-                className={`fade-up ${heading.isVisible ? "show" : ""} `}
+                className={`fade-up ${heading.isVisible ? "show" : ""}`}
               >
                 <Image
                   src="/assests/header/images/digram-about.png"

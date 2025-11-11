@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState } from "react";
+// import Image from "next/image";
 import useInView from "@/app/hooks/useInView";
 
 export default function Carousel() {

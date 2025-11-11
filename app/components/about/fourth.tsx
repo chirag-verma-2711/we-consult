@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import useInView from "@/app/hooks/useInView";
+// import useInView from "@/app/hooks/useInView";
 
 export default function Fourth() {
-  const heading = useInView({ threshold: 0.2 });
+  // const heading = useInView({ threshold: 0.2 });
   return (
     <>
       <section>

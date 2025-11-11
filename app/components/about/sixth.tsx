@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import useInView from "@/app/hooks/useInView";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Sixth() {
   const heading = useInView({ threshold: 0.2 });
