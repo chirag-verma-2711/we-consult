@@ -8,7 +8,7 @@ export default function ScrumPage() {
 
   return (
     <section className="w-full bg-[var(--lgreen2)] py-16">
-      <div className="container mx-auto px-6 text-[#1B3233]">
+      <div className="container mx-auto px-5 text-[#1B3233]">
         {/* Title */}
         <h2
           ref={ref}

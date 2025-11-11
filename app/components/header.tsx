@@ -39,7 +39,7 @@ export default function Header() {
     <header className={`sticky top-0 z-50 ${satoshi.className}`}>
       <nav className="bg-[var(--dgreen)] border-b border-gray-700 relative">
         {/* <div className="max-w-7xl mx-auto md:px-[24px] px-[12px]"> */}
-        <div className="container mx-auto md:px-[24px] px-[12px]">
+        <div className="container mx-auto px-4 sm:px-5">
           <div className="flex justify-between items-center h-[82px]">
             {/* Logo */}
             <Link href="/" className="text-xl font-bold text-gray-800">
@@ -70,7 +70,7 @@ export default function Header() {
 
               {/* About Us */}
               <div className="relative group">
-                <Link href="#about" onClick={() => handleLinkClick("#about")}>
+                <Link href="/about" onClick={() => handleLinkClick("#about")}>
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#about"
                       ? "text-[#53FFA9]"

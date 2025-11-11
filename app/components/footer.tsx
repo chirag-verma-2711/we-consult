@@ -27,7 +27,8 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[var(--dgreen)] text-white pt-8">
-        <div className="container py-16 px-14 mx-auto flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6border-b border-gray-700">
+        <div className="container px-4 sm:px-6 mx-auto">
+          <div className="  py-16 px-14 mx-auto flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6border-b border-gray-700">
           {/* Logo */}
           <div>
             {/* <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
@@ -146,6 +147,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+        </div>
         </div>
 
         {/* Bottom Bar */}

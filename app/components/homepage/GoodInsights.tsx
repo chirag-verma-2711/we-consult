@@ -17,7 +17,7 @@ const GoodInsights = () => {
 
   return (
     <div className="flex justify-center py-16 bg-[#ECF6F2]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-5">
         <h2
           ref={heading.ref}
           className={`fade-up ${
