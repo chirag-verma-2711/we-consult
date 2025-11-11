@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import useInView from "@/app/hooks/useInView";
 
 const ProblemSolv = () => {
@@ -40,14 +41,21 @@ const ProblemSolv = () => {
               analytics with field-tested pragmatism, ensuring every
               recommendation can be executed and sustained on ground.
             </p>
-            <button
+            {/* <button
               ref={ref}
               className={`fade-up ${
                 isVisible ? "show" : ""
               } bg-[#1B3233] text-[#ECF6F2] text-[20px] px-5 py-2 rounded-[40px] w-fit`}
             >
               Let’s talk
-            </button>
+            </button> */}
+            <div
+              ref={ref}
+              className={`fade-up ${
+                isVisible ? "show" : ""
+              } `}>
+              <Link href="/" className="bg-[#1B3233] text-[#ECF6F2] text-[20px] px-5 py-2 rounded-[40px] transition-all ease-in-out hover:opacity-90">Let’s talk</Link>
+            </div>
           </div>
         </div>
 

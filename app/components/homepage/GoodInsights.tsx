@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import useInView from "@/app/hooks/useInView";
 
@@ -16,7 +17,7 @@ const GoodInsights = () => {
   const card6 = useInView({ threshold: 0.2 });
 
   return (
-    <div className="flex justify-center py-16 bg-[#ECF6F2]">
+    <div className="py-16 bg-[#ECF6F2]">
       <div className="container mx-auto px-4 sm:px-5">
         <h2
           ref={heading.ref}
@@ -37,15 +38,15 @@ const GoodInsights = () => {
           performance and scale with confidence
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 *:sm:max-w-lg *:xl:max-w-none gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 *:sm:max-w-lg *:xl:max-w-none gap-6  mb-12">
           {/* Card 1 */}
           <article
-            ref={card1.ref}
+            ref={card6.ref}
             className={`fade-up ${
-              card1.isVisible ? "show" : ""
-            } hover:bg-[#aac5b4] hover:shadow-2xl rounded-xl shadow-lg transition-all duration-300 ease-in-out bg-[#daebe3] mx-auto`}
+              card6.isVisible ? "show" : ""
+            }  mx-auto`}
           >
-            <div className="p-2 rounded-2xl h-full">
+            <div className="p-2  h-full transition-all duration-300 ease-in-out bg-[#daebe3] hover:bg-[#aac5b4] hover:shadow-lg rounded-xl">
               <div className="relative grid grid-cols-[35%_65%] h-full">
                 <Image
                   src="/assests/header/images/goodinsights/Mohan-Goenka.png"
@@ -82,12 +83,12 @@ const GoodInsights = () => {
 
           {/* Card 2 */}
           <article
-            ref={card2.ref}
+            ref={card6.ref}
             className={`fade-up ${
-              card2.isVisible ? "show" : ""
-            } hover:bg-[#aac5b4] hover:shadow-2xl rounded-xl shadow-lg transition-all duration-300 ease-in-out bg-[#daebe3] mx-auto`}
+              card6.isVisible ? "show" : ""
+            }  mx-auto`}
           >
-            <div className="p-2 rounded-2xl h-full">
+            <div className="p-2  h-full transition-all duration-300 ease-in-out bg-[#daebe3] hover:bg-[#aac5b4] hover:shadow-lg rounded-xl">
               <div className="relative grid grid-cols-[35%_65%] h-full">
                 <Image
                   src="/assests/header/images/goodinsights/Sanjay-Purohit.png"
@@ -124,12 +125,12 @@ const GoodInsights = () => {
 
           {/* Card 3 */}
           <article
-            ref={card3.ref}
+            ref={card6.ref}
             className={`fade-up ${
-              card3.isVisible ? "show" : ""
-            } hover:bg-[#aac5b4] hover:shadow-2xl rounded-xl shadow-lg transition-all duration-300 ease-in-out bg-[#daebe3] mx-auto`}
+              card6.isVisible ? "show" : ""
+            }  mx-auto`}
           >
-            <div className="p-2 rounded-2xl h-full">
+            <div className="p-2  h-full transition-all duration-300 ease-in-out bg-[#daebe3] hover:bg-[#aac5b4] hover:shadow-lg rounded-xl">
               <div className="relative grid grid-cols-[35%_65%] h-full">
                 <Image
                   src="/assests/header/images/goodinsights/Sunil-Kataria.png"
@@ -166,12 +167,12 @@ const GoodInsights = () => {
 
           {/* Card 4 */}
           <article
-            ref={card4.ref}
+            ref={card6.ref}
             className={`fade-up ${
-              card4.isVisible ? "show" : ""
-            } hover:bg-[#aac5b4] hover:shadow-2xl rounded-xl shadow-lg transition-all duration-300 ease-in-out bg-[#daebe3] mx-auto`}
+              card6.isVisible ? "show" : ""
+            }  mx-auto`}
           >
-            <div className="p-2 rounded-2xl h-full">
+            <div className="p-2  h-full transition-all duration-300 ease-in-out bg-[#daebe3] hover:bg-[#aac5b4] hover:shadow-lg rounded-xl">
               <div className="relative grid grid-cols-[35%_65%] h-full">
                 <Image
                   src="/assests/header/images/goodinsights/Praveen-Jakate.png"
@@ -210,12 +211,12 @@ const GoodInsights = () => {
 
           {/* Card 5 */}
           <article
-            ref={card5.ref}
+            ref={card6.ref}
             className={`fade-up ${
-              card5.isVisible ? "show" : ""
-            } hover:bg-[#aac5b4] hover:shadow-2xl rounded-xl shadow-lg transition-all duration-300 ease-in-out bg-[#daebe3] mx-auto`}
+              card6.isVisible ? "show" : ""
+            }  mx-auto`}
           >
-            <div className="p-2 rounded-2xl h-full">
+            <div className="p-2  h-full transition-all duration-300 ease-in-out bg-[#daebe3] hover:bg-[#aac5b4] hover:shadow-lg rounded-xl">
               <div className="relative grid grid-cols-[35%_65%] h-full">
                 <Image
                   src="/assests/header/images/goodinsights/Neil-George.png"
@@ -257,9 +258,9 @@ const GoodInsights = () => {
             ref={card6.ref}
             className={`fade-up ${
               card6.isVisible ? "show" : ""
-            } hover:bg-[#aac5b4] hover:shadow-2xl rounded-xl shadow-lg transition-all duration-300 ease-in-out bg-[#daebe3] mx-auto`}
+            }  mx-auto`}
           >
-            <div className="p-2 rounded-2xl h-full">
+            <div className="p-2  h-full transition-all duration-300 ease-in-out bg-[#daebe3] hover:bg-[#aac5b4] hover:shadow-lg rounded-xl">
               <div className="relative grid grid-cols-[35%_65%] h-full">
                 <Image
                   src="/assests/header/images/goodinsights/Bill-Brothers.png"
@@ -292,6 +293,14 @@ const GoodInsights = () => {
               </div>
             </div>
           </article>
+        </div>
+        <div className="text-center">
+          <Link
+            href="/"
+            className="bg-[#1B3233] text-[#ECF6F2] text-[20px] px-5 py-2 rounded-[40px] transition-all ease-in-out hover:opacity-90"
+          >
+            Read All Testimonails
+          </Link>
         </div>
       </div>
     </div>
