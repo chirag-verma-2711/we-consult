@@ -1,20 +1,27 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-// import useInView from "@/app/hooks/useInView";
+// import Image from "next/image";
+import useInView from "@/app/hooks/useInView";
 
 export default function Banner() {
-//   const { ref, isVisible } = useInView({ threshold: 0.2 });
+  const heading = useInView({ threshold: 0.2 });
   return (
     <>
       <section>
-        <div>
-            <div className="container mx-auto px-5 py-5">
-                <div className="max-w-2xl bg-black p-4">
-                    <h1>Driving Growth Through Transformation.</h1>
-                </div>
+        <div className="bg-[url('/assests/header/images/aboutbanner.jpg')] bg-fixed bg-cover bg-no-repeat bg-center min-h-[80vh] flex items-end">
+          <div className="container mx-auto px-5 py-10">
+            <div
+              ref={heading.ref}
+              className={`fade-up ${
+                heading.isVisible ? "show" : ""
+              } max-w-[917px] w-fit p-8 bg-black/50 backdrop-blur-sm rounded-[10px]`}
+            >
+              <h1 className="text-white sm:text-start text-center lg:text-[70px] md:text-5xl sm:text-4xl text-3xl lg:leading-22 md:leading-18 sm:leading-16 leading-12">
+                Driving Growth Through Transformation.
+              </h1>
             </div>
+          </div>
         </div>
       </section>
     </>

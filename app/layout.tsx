@@ -2,6 +2,8 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { Metadata } from "next";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "font-awesome/css/font-awesome.min.css";
 
 import { satoshi, zodiak } from "./fonts";
 
@@ -17,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${satoshi.variable} ${zodiak.variable}`}
-      >
+      <body className={`${satoshi.variable} ${zodiak.variable}`}>
         <Header />
         <main>{children}</main>
         <Footer />
