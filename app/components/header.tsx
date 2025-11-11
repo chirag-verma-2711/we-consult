@@ -138,8 +138,8 @@ export default function Header() {
               {/* Contact Us */}
               <div className="relative group">
                 <Link
-                  href="#contact"
-                  onClick={() => handleLinkClick("#contact")}
+                  href="/contact"
+                  // onClick={() => handleLinkClick("#contact")}
                 >
                   <div
                     className={`text-lg p-3 flex items-center ${activeLink === "#contact"
@@ -250,7 +250,7 @@ export default function Header() {
               className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
               onClick={closeMenu}
             >
-              <Link href="#contact" onClick={closeMenu}>
+              <Link href="/contact" onClick={closeMenu}>
                 Contact Us
               </Link>
             </summary>
