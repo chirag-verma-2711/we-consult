@@ -14,7 +14,6 @@ export default function Fifth() {
         <div className="bg-[#d9e6dc]">
           <div className="container mx-auto px-5 py-12">
             <div className="grid lg:grid-cols-[40%_60%] grid-cols-1 gap-16">
-              
               <div className="h-full flex flex-col justify-center">
                 <h2
                   ref={heading.ref}
@@ -29,7 +28,7 @@ export default function Fifth() {
                   ref={heading.ref}
                   className={`fade-up ${
                     heading.isVisible ? "show" : ""
-                  } text-[25px] max-w-[550px]`}
+                  } text-lg max-w-[550px]`}
                 >
                   We operate on a fractional leadership and project-based model,
                   enabling clients to access senior industry expertise without
@@ -51,17 +50,15 @@ export default function Fifth() {
                 </Link>
               </div>
 
-              <div
-                ref={heading.ref}
-                className={`fade-up ${heading.isVisible ? "show" : ""}`}
-              >
-                <Image
-                  src="/assests/header/images/digram-about.png"
-                  className="w-full h-auto"
-                  width={1000}
-                  height={1000}
-                  alt=""
-                />
+              <div className="max-w-[700px]">
+               
+                  <Image
+                    src="/assests/header/images/digram-about.png"
+                    className="w-full h-auto object-contain block"
+                    width={1000}
+                    height={1000}
+                    alt=""
+                  />
               </div>
             </div>
           </div>

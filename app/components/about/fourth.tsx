@@ -15,7 +15,7 @@ export default function Fourth() {
               <h2 className="text-[40px] font-semibold text-[var(--dgreen)] text-center">The Minds Behind the Vision</h2>
             </div>
             <div>
-              <p className="text-center max-w-6xl mx-auto text-[22px]">
+              <p className="text-center max-w-5xl mx-auto text-lg">
                 Jatin Panchal and Vinod Rao bring over five decades of combined leadership across diverse business environments. They blend strategic clarity with practical, on-ground execution, helping organizations strengthen their commercial engines, build capable teams, and unlock scalable growth.
               </p>
             </div>
@@ -33,7 +33,7 @@ export default function Fourth() {
                       <p className="text-[18px] text-[var(--dgreen)] opacity-95">MBA: SIMSR Exec MBA: INSEAD, France</p>
                     </div>
                     <div className="h-[1px] bg-black max-w-[350px] my-2"></div>
-                    <div className="text-[25px] font-thin max-w-[880px]">
+                    <div className="text-lg max-w-[880px]">
                       A commercial transformation leader with over 25 years of experience in FMCG & consumer healthcare, driving growth, reach, & sales excellence across channels. Jatin has successfully led the transition of healthcare & pharma portfolios into consumer-facing FMCG businesses. Expertise in building new businesses, including ecom for FMCG firms, he blends analytical precision with people-centric leadership. He excels in designing transformative go-to-market strategies, building capable teams, & unlocking business momentum through insight-led execution.
                     </div>
                   </div>
@@ -58,7 +58,7 @@ export default function Fourth() {
                       <p className="text-[18px] text-[var(--dgreen)] opacity-95">MBA: JBIMS</p>
                     </div>
                     <div className="h-[1px] bg-black max-w-[350px] my-2"></div>
-                    <div className="text-[25px] font-thin max-w-[880px]">
+                    <div className="text-lg max-w-[880px]">
                       A seasoned P&L leader with over 30 years of experience across FMCG, healthcare, and retail banking. Vinod has led business turnarounds and large scale distribution expansions, earning a reputation for translating strategy into seamless execution. He brings deep expertise in sales transformation, category growth, channel management, and trade excellence, along with hands-on experience in cold chain infrastructure and operating within both family-run and PE-backed promoter environments.
                     </div>
                   </div>

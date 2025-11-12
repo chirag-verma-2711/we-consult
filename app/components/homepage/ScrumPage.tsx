@@ -23,7 +23,7 @@ export default function ScrumPage() {
             <h3 className="text-4xl font-medium mb-5">
               Schedule a call with us to see if we can help
             </h3>
-            <p>
+            <p className="text-lg">
               Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit
               ac nisl. Sed aliquam ultrices.
             </p>

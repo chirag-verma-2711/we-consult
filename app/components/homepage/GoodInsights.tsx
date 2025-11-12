@@ -59,7 +59,7 @@ const GoodInsights = () => {
                   <h3 className="text-xl font-semibold text-[var(--dgreen)] mb-1">
                     Mohan Goenka
                   </h3>
-                  <p className="text-[14px] font-thin text-[var(--dgreen)] mb-[7px]">
+                  <p className="text-[15px] text-[var(--dgreen)] mb-[7px]">
                     Vice Chairman & Whole Time Director ~{" "}
                     <span className="font-semibold"> Emami Ltd.</span>
                   </p>
@@ -101,7 +101,7 @@ const GoodInsights = () => {
                   <h3 className="text-xl font-semibold text-[var(--dgreen)] mb-1">
                     Sanjay Purohit
                   </h3>
-                  <p className="text-[14px] font-thin text-[var(--dgreen)] mb-[7px]">
+                  <p className="text-[15px] text-[var(--dgreen)] mb-[7px]">
                     Whole Time Director and Group CEO ~{" "}
                     <span className="font-semibold"> Sapphire Foods.</span>
                   </p>
@@ -143,7 +143,7 @@ const GoodInsights = () => {
                   <h3 className="text-xl font-semibold text-[var(--dgreen)] mb-1">
                     Sunil Kataria
                   </h3>
-                  <p className="text-[14px] font-thin text-[var(--dgreen)] mb-[7px]">
+                  <p className="text-[15px] text-[var(--dgreen)] mb-[7px]">
                     CEO &MD ~{" "}
                     <span className="font-semibold"> Godrej Agrovet Ltd.</span>
                   </p>
@@ -185,7 +185,7 @@ const GoodInsights = () => {
                   <h3 className="text-xl font-semibold text-[var(--dgreen)] mb-1">
                     Praveen Jakate
                   </h3>
-                  <p className="text-[14px] font-thin text-[var(--dgreen)] mb-[7px]">
+                  <p className="text-[15px] text-[var(--dgreen)] mb-[7px]">
                     Ex Chairman and Managing Director ~{" "}
                     <span className="font-semibold">
                       {" "}
@@ -229,7 +229,7 @@ const GoodInsights = () => {
                   <h3 className="text-xl font-semibold text-[var(--dgreen)] mb-1">
                     Neil George
                   </h3>
-                  <p className="text-[14px] font-thin text-[var(--dgreen)] mb-[7px]">
+                  <p className="text-[15px] text-[var(--dgreen)] mb-[7px]">
                     Ex MD ~{" "}
                     <span className="font-semibold">
                       {" "}
@@ -273,7 +273,7 @@ const GoodInsights = () => {
                   <h3 className="text-xl font-semibold text-[var(--dgreen)] mb-1">
                     Bill Brothers
                   </h3>
-                  <p className="text-[14px] font-thin text-[var(--dgreen)] mb-[7px]">
+                  <p className="text-[15px] text-[var(--dgreen)] mb-[7px]">
                     Ex Director Global Sales Development (Retired) ~{" "}
                     <span className="font-semibold"> The Hershey Company</span>
                   </p>

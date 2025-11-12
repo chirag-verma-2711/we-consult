@@ -38,7 +38,7 @@ export default function Carousel() {
             <div className="bg-[var(--lgreen3)] rounded-[30px] rounded-tl-[180px] p-12 pt-16  pe-14 flex flex-col justify-end h-full">
               <h3 className="text-[80px] text-[var(--dgreen)] ">Vision</h3>
               <div className="bg-[var(--dgreen)] h-[1px] w-full mb-5"></div>
-              <p className="text-[25px]">
+              <p className="text-lg">
                 To be the trusted partner for businesses seeking to transform
                 their sales and marketing capabilities, creating sustainable
                 growth and measurable impact across industries.
@@ -59,7 +59,7 @@ export default function Carousel() {
             <div className="bg-[var(--lgreen3)] rounded-[30px] rounded-tl-[180px]  p-12 pt-16  pe-14 flex flex-col justify-end h-full">
               <h3 className="text-[80px] text-[var(--dgreen)] ">Mission</h3>
               <div className="bg-[var(--dgreen)] h-[1px] w-full mb-5"></div>
-              <p className="text-[25px]">
+              <p className="text-lg">
                 To deliver innovative, practical, and scalable sales and
                 marketing solutions that empower organisations to optimise
                 processes, unlock efficiencies, and strengthen market presence.
@@ -80,7 +80,7 @@ export default function Carousel() {
             <div className="bg-[var(--lgreen3)] rounded-[30px] rounded-tl-[180px]  p-12 pt-16 pe-14  flex flex-col justify-end h-full">
               <h3 className="text-[80px] text-[var(--dgreen)] ">Values</h3>
               <div className="bg-[var(--dgreen)] h-[1px] w-full mb-5"></div>
-              <p className="text-[25px]">
+              <p className="text-lg">
                 <strong>Integrity:</strong> Building trust through honest and
                 transparent partnerships. <br />
                 <strong>Innovation:</strong> Driving fresh ideas and modern

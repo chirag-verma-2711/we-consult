@@ -24,7 +24,7 @@ const ProblemSolv = () => {
               ref={ref}
               className={`fade-up ${
                 isVisible ? "show" : ""
-              } text-md font-normal text-[var(--dgreen)]  mb-3`}
+              } text-lg  font-normal text-[var(--dgreen)]  mb-3`}
             >
               We operate on a fractional leadership and project-based model,
               enabling clients to access senior industry expertise without
@@ -34,7 +34,7 @@ const ProblemSolv = () => {
               ref={ref}
               className={`fade-up ${
                 isVisible ? "show" : ""
-              } text-md font-normal text-[var(--dgreen)]  mb-3`}
+              } text-lg font-normal text-[var(--dgreen)]  mb-3`}
             >
               At LeapBridge, we believe in bridging the gap between Organisation
               Strategy & On-ground Execution. Our approach blends data-backed
@@ -53,7 +53,7 @@ const ProblemSolv = () => {
               ref={ref}
               className={`fade-up ${
                 isVisible ? "show" : ""
-              } `}>
+              } mt-7`}>
               <Link href="/" className="bg-[#1B3233] text-[#ECF6F2] text-[20px] px-5 py-2 rounded-[40px] transition-all ease-in-out hover:opacity-90">Let’s talk</Link>
             </div>
           </div>
