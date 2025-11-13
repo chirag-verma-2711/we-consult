@@ -9,7 +9,7 @@ export default function Banner() {
   return (
     <>
       <section>
-        <div className="bg-[url('/assests/header/images/aboutbanner.jpg')] bg-fixed bg-cover bg-no-repeat bg-center min-h-[80vh] flex items-end">
+        <div className="bg-[url('/assests/header/images/aboutbanner.jpg')] bg-fixed bg-cover bg-no-repeat bg-center min-h-[635px] flex items-end">
           <div className="container mx-auto px-5 py-10">
             <div
               ref={heading.ref}

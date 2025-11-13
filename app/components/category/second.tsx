@@ -12,7 +12,7 @@ export default function Second() {
     <>
       <section>
         <div className="bg-[var(--lgreen2)]">
-          <div className="mx-auto lg:max-w-[1100px] container px-5 py-10">
+          <div className="mx-auto lg:max-w-[1150px] container px-5 py-10">
             <div
               ref={heading1.ref}
               className={`fade-up ${
@@ -31,7 +31,7 @@ export default function Second() {
                 >
                 <Image
                   src="assests/header/images/category-border.svg"
-                  className="w-[220px] ms-auto mb-10"
+                  className="w-[270px] ms-auto mb-10"
                   width={500}
                   height={500}
                   alt=""
@@ -43,8 +43,8 @@ export default function Second() {
                   heading2.isVisible ? "show" : ""
                 } w-full flex items-end`}
               >
-                <p className="text-[var(--dgreen)] text-3xl font-normal">
-                  Empowering growth across consumer categories
+                <p className="text-[var(--dgreen)] text-3xl font-thin">
+                  We shape go-to-market excellence across India’s consumer ecosystem
                 </p>
               </div>
             </div>
