@@ -15,10 +15,10 @@ export default function Banner() {
               ref={heading.ref}
               className={`fade-up ${
                 heading.isVisible ? "show" : ""
-              } max-w-[700px] w-fit p-8 bg-black/50 backdrop-blur-sm rounded-[10px]`}
+              } max-w-[700px] w-fit p-8 bg-[#1b323345] backdrop-blur-[8px] border border-[#C8C8C8] rounded-[20px]`}
             >
               <h1 className="text-white sm:text-start text-center lg:text-[50px] md:text-5xl sm:text-4xl text-3xl lg:leading-14 md:leading-10 sm:leading-8 leading-12">
-                Experience Across Markets That Matter
+                Trusted by Customers Everywhere
               </h1>
             </div>
           </div>

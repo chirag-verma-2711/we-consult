@@ -2,19 +2,17 @@
 import { useState, useEffect } from "react";
 
 export default function Carousel() {
+  const totalSlides = 5; // You have 5 slides
+
   const [current, setCurrent] = useState(0);
 
-  const nextSlide = () => setCurrent((prev) => (prev === 2 ? 0 : prev + 1));
-  // const prevSlide = () => setCurrent((prev) => (prev === 0 ? 2 : prev - 1));
+  const nextSlide = () =>
+    setCurrent((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
 
-  // ✅ Auto Slide Effect
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000); // Change slide every 4 seconds
-
-    return () => clearInterval(interval); // cleanup
-  }, [current]); // or use [] to make it constant interval
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [current]);
 
   return (
     <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-full border-[35px] border-[var(--lgreen)]">
@@ -72,6 +70,39 @@ export default function Carousel() {
             </p>
           </div>
         </div>
+        {/* Slide 2 */}
+        <div className="min-w-full relative">
+          <img
+            src="/assests/header/images/herobanner/slide2.png"
+            alt="Slide One"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-[50%] pb-10 left-0 w-full h-full flex flex-col items-center justify-end bg-[linear-gradient(0deg,rgba(0,0,0,0.7)_0%,rgba(255,255,255,0)_50%)] text-center text-white">
+            <h3 className="text-2xl font-medium">Capabilities</h3>
+            <p className="text-sm px-12">
+              Building the right people and process capabilities to sustain
+              transformation and accelerate performance.
+            </p>
+          </div>
+        </div>
+
+        {/* Slide 3 */}
+        <div className="min-w-full relative">
+          <img
+            src="/assests/header/images/herobanner/slide3.png"
+            alt="Slide One"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-[50%] pb-10 left-0 w-full h-full flex flex-col items-center justify-end bg-[linear-gradient(0deg,rgba(0,0,0,0.7)_0%,rgba(255,255,255,0)_50%)] text-center text-white">
+            <h3 className="text-2xl font-medium">
+              Technology & Data Analytics
+            </h3>
+            <p className="text-sm px-12">
+              Embedding technology and analytics to make decisions faster,
+              smarter, and more predictive.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* <button
@@ -90,12 +121,13 @@ export default function Carousel() {
 
       {/* Dots */}
       <div className="absolute top-[45%] w-full flex justify-center gap-2  translate-y-[50%]">
-        {[0, 1, 2].map((index) => (
+        {[0, 1, 2, 3, 4].map((index) => (
           <span
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer transition ${current === index ? "bg-white" : "bg-white/50"
-              }`}
+            className={`w-3 h-3 rounded-full cursor-pointer transition ${
+              current === index ? "bg-[var(--dgreen2)] w-[30px]" : "bg-white/50"
+            }`}
           ></span>
         ))}
       </div>

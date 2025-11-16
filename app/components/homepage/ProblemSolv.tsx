@@ -7,7 +7,7 @@ import useInView from "@/app/hooks/useInView";
 const ProblemSolv = () => {
   const { ref, isVisible } = useInView({ threshold: 0.2 });
   return (
-    <section className="bg-[#e8f5f1] min-h-screen flex flex-col md:flex-row">
+    <section className=" min-h-screen flex flex-col md:flex-row py-5">
       <div className="container mx-auto px-4 flex flex-wrap=">
         <div className="process md:w-1/2 w-full md:p-8 py-8 md:sticky md:top-[50px] md:h-screen">
           <div className=" max-w-md  mb-3">
@@ -51,22 +51,21 @@ const ProblemSolv = () => {
             </button> */}
             <div
               ref={ref}
-              className={`fade-up ${
-                isVisible ? "show" : ""
-              } mt-7`}>
-              <Link href="/" className="bg-[#1B3233] text-[#ECF6F2] text-[20px] px-5 py-2 rounded-[40px] transition-all ease-in-out hover:opacity-90">Let’s talk</Link>
+              className={`fade-up ${isVisible ? "show" : ""} mt-7`}
+            >
+              <Link
+                href="/"
+                className="bg-[#1B3233] text-[#ECF6F2] text-[20px] px-5 py-2 rounded-[40px] transition-all ease-in-out hover:opacity-90"
+              >
+                Let’s talk
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="md:w-1/2 w-full md:p-8 py-8 space-y-6 right-sticky-process text-[#1B3233]">
-          <div
-            ref={ref}
-            className={`fade-up ${
-              isVisible ? "show" : ""
-            } bg-[#d6ebe2] rounded-lg p-8 md:p-16 lg:p-28`}
-          >
-            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light opacity-30 mb-8 md:mb-12 lg:mb-16">
+        <div className="md:w-1/2 w-full md:p-8 py-8 space-y-6 right-sticky-process text-white *:bg-[var(--dgreen)] *:rounded-lg *:p-8 *:md:p-16  *:lg:px-22 ">
+          <div ref={ref} className={`fade-up ${isVisible ? "show" : ""}   `}>
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light     ">
               1
             </h3>
             <h4 className="font-normal leading-[120%] text-[20px] md:text-[22px] lg:text-[26px] mb-4 md:mb-6 lg:mb-8">
@@ -79,8 +78,8 @@ const ProblemSolv = () => {
             </p>
           </div>
 
-          <div className="bg-[#d6ebe2] rounded-lg p-8 md:p-16 lg:p-28">
-            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light opacity-30 mb-8 md:mb-12 lg:mb-16">
+          <div className="  ">
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light         ">
               2
             </h3>
             <h4 className="font-normal leading-[120%] text-[20px] md:text-[22px] lg:text-[26px] mb-4 md:mb-6 lg:mb-8">
@@ -93,8 +92,8 @@ const ProblemSolv = () => {
             </p>
           </div>
 
-          <div className="bg-[#d6ebe2] rounded-lg p-8 md:p-16 lg:p-28">
-            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light opacity-30 mb-8 md:mb-12 lg:mb-16">
+          <div className="  ">
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light         ">
               3
             </h3>
             <h4 className="font-normal leading-[120%] text-[20px] md:text-[22px] lg:text-[26px] mb-4 md:mb-6 lg:mb-8">
@@ -107,8 +106,8 @@ const ProblemSolv = () => {
             </p>
           </div>
 
-          <div className="bg-[#d6ebe2] rounded-lg p-8 md:p-16 lg:p-28">
-            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light opacity-30 mb-8 md:mb-12 lg:mb-16">
+          <div className="  ">
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light         ">
               4
             </h3>
             <h4 className="font-normal leading-[120%] text-[20px] md:text-[22px] lg:text-[26px] mb-4 md:mb-6 lg:mb-8">

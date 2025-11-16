@@ -6,7 +6,7 @@ import useInView from "@/app/hooks/useInView";
 export default function GreatResult() {
   const { ref, isVisible } = useInView({ threshold: 0.2 });
   return (
-    <section className="w-full bg-[#1b3233] text-white py-16">
+    <section className="w-full bg-[var(--dgreen)] text-white py-16">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div ref={ref} className={`fade-up ${isVisible ? "show" : ""} p-10`}>
           <Image

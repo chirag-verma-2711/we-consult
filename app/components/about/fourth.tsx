@@ -38,7 +38,7 @@ export default function Fourth() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-0 -bottom-[105px] text-white py-6 px-[50px] bg-[#859d8a] w-fit rounded-tr-[20px] rounded-br-[30px] rounded-bl-[60px] text-[20px]">
+                <div className="absolute left-0 -bottom-[105px] text-white py-6 px-[50px] bg-[var(--dgreen)] w-fit rounded-tr-[20px] rounded-br-[30px] rounded-bl-[60px] text-[20px]">
                   <p><strong>Abbot Nutrition</strong> - Commercial Leader</p>
                   <p><strong>Danone Nutrition</strong> - Director sales</p>
                   <p><strong>Godrej Consumer Products Ltd.</strong> - Head - Sales Development</p>
@@ -63,7 +63,7 @@ export default function Fourth() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-0 -bottom-[105px] text-white py-6 px-[50px] bg-[#859d8a] w-fit rounded-tr-[20px] rounded-br-[30px] rounded-bl-[60px] text-[20px]">
+                <div className="absolute left-0 -bottom-[105px] text-white py-6 px-[50px] bg-[var(--dgreen)] w-fit rounded-tr-[20px] rounded-br-[30px] rounded-bl-[60px] text-[20px]">
                   <p><strong>Nobel Hygiene Pvt Ltd</strong> - Chief Commercial Officer</p>
                   <p><strong>Emami Ltd.</strong> - President Sales</p>
                   <p><strong>Hershey India</strong> - Director Sales</p>

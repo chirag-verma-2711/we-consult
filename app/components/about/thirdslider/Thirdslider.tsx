@@ -29,11 +29,12 @@ export default function Carousel() {
           Purpose. Path. Principles.
         </h2>
       </div>
-      <div
+      <div className=" max-w-[1024px] mx-auto overflow-hidden">
+        <div
         className="flex transition-transform duration-700 "
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
-        <div className="min-w-full relative grid lg:grid-cols-2 grid-cols-1 gap-8 lg:items-stretch *:px-2">
+        <div className="min-w-full  relative grid lg:grid-cols-2 grid-cols-1 gap-8 lg:items-stretch *:px-2">
           <div className="">
             <div className="bg-[var(--lgreen3)] rounded-[30px] rounded-tl-[180px] p-12 pt-16  pe-14 flex flex-col justify-end h-full">
               <h3 className="text-[80px] text-[var(--dgreen)] ">Vision</h3>
@@ -102,6 +103,7 @@ export default function Carousel() {
           </div>
           <div className="lg:block hidden border border-[#8D8D8D] bg-[url('/assests/header/images/values.jpg')] bg-cover  bg-no-repeat bg-center rounded-[30px] rounded-br-[180px] "></div>
         </div>
+      </div>
       </div>
 
       {/* Buttons */}

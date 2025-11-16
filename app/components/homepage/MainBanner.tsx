@@ -30,13 +30,14 @@ const MainBanner: React.FC = () => {
 
   return (
     <div className="relative w-full  overflow-hidden">
-      <iframe
+      {/* <iframe
         className="absolute top-1/2 left-1/2 w-[200vw] h-[200vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         src="https://www.youtube.com/embed/IP3vF2jpnJk?autoplay=1&mute=1&loop=1&playlist=IP3vF2jpnJk&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0"
         title="Background Video"
         allow="autoplay; encrypted-media"
       ></iframe>
-      <div className="absolute inset-0 bg-[#1a3d3d]/80 z-10"></div>
+      <div className="absolute inset-0 bg-[#1a3d3d]/80 z-10"></div> */}
+      <div className="absolute inset-0 bg-[var(--dgreen)] z-10"></div>
 
       {/* Your content over video */}
       <div className="relative z-10 text-white">
@@ -47,33 +48,38 @@ const MainBanner: React.FC = () => {
               <span className="w-[52px] h-8 rounded-[40px] bg-[#CEEAD5]"></span>
               <span className="w-8 h-8 rounded-full bg-[#CEEAD54D]"></span>
             </div> */}
-            
-            <div ref={ref} className="flex space-x-3 items-center justify-center my-12 h-[30px]">
+
+            <div
+              ref={ref}
+              className="flex space-x-3 items-center justify-center my-12 h-[30px]"
+            >
               <span
-                className={`bar w-[30px] rounded-full bg-[#CEEAD54D] ${isVisible ? "animate" : ""}`}
+                className={`bar w-[30px] rounded-full bg-[var(--lgreen2)] ${
+                  isVisible ? "animate" : ""
+                }`}
                 style={{ transitionDelay: "0.6s" }}
               ></span>
 
               <span
-                className={`bar w-[52px] rounded-[40px] bg-[#CEEAD5] ${isVisible ? "animate" : ""}`}
-                style={{ transitionDelay: "0.8s" }}   // slight stagger
+                className={`bar w-[52px] rounded-[40px] bg-[#7BBD93] ${
+                  isVisible ? "animate" : ""
+                }`}
+                style={{ transitionDelay: "0.8s" }} // slight stagger
               ></span>
 
               <span
-                className={`bar w-[30px] rounded-full bg-[#CEEAD54D] ${isVisible ? "animate" : ""}`}
-                style={{ transitionDelay: "1s" }}   // delayed third
+                className={`bar w-[30px] rounded-full bg-[var(--lgreen2)] ${
+                  isVisible ? "animate" : ""
+                }`}
+                style={{ transitionDelay: "1s" }} // delayed third
               ></span>
             </div>
-
-
           </div>
           <div
             ref={ref}
             className={`fade-up ${isVisible ? "show" : ""} heading-home mb-4`}
           >
-            <p
-              className="subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]"
-            >
+            <p className="subtitle-h mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#CEEAD5]">
               From Insight to Impact
             </p>
             <h1 className="md:text-6xl sm:text-5xl text-3xl  max-w-6xl font-bold text-[#DFFFE0] leading-tight">

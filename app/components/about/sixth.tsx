@@ -11,8 +11,8 @@ export default function Sixth() {
     <>
       <section>
         <div className="bg-[#d9e6dc]">
-          <div className="container mx-auto px-5 py-12">
-            <div className="grid lg:grid-cols-4 sm:grid-cols-2 xl:gap-20 lg:gap-12 gap-5  *:bg-[var(--lgreen3)] *:p-4 *:pb-10 *:rounded-2xl *:text-center *:text-[27px] *:font-semibold *:text-[var(--dgreen)]">
+          <div className="container mx-auto px-5 pb-12">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-2 xl:gap-20 lg:gap-12 gap-5 *:border *:bg-[var(--lgreen3)] *:p-4 *:pb-10 *:rounded-2xl *:text-center *:text-[27px] *:font-semibold *:text-[var(--dgreen)]">
               <div>
                 <img src="/assests/header/images/Immerse.png" className="p-5 max-w-[130px] mx-auto" alt="" />
                 <p>Immerse</p>

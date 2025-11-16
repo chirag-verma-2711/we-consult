@@ -83,22 +83,22 @@ export default function Header() {
 
               <div className="relative group">
                 <Link
-                  href="/industries"
+                  href="/testimonials"
                   className={`text-lg p-3 flex items-center ${
-                    pathname === "/industries"
+                    pathname === "/testimonials"
                       ? "text-[#53FFA9]"
                       : "text-[var(--lgreen)]"
                   }`}
                 >
-                  Industries
+                  Testimonials
                 </Link>
               </div>
 
               <div className="relative group">
                 <Link
-                  href="/casestudies"
+                  href="/casestudies/pharma-to-fmcg-transformation"
                   className={`text-lg p-3 flex items-center ${
-                    pathname === "/casestudies"
+                    pathname === "/casestudies/pharma-to-fmcg-transformation"
                       ? "text-[#53FFA9]"
                       : "text-[var(--lgreen)]"
                   }`}
@@ -185,8 +185,8 @@ export default function Header() {
               className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
               onClick={closeMenu}
             >
-              <Link href="/industries" onClick={closeMenu}>
-                Industries
+              <Link href="/testimonials" onClick={closeMenu}>
+                Testimonials
               </Link>
             </summary>
           </details>
@@ -196,7 +196,7 @@ export default function Header() {
               className="flex justify-center gap-5 items-center cursor-pointer text-[var(--lgreen)] text-lg"
               onClick={closeMenu}
             >
-              <Link href="/case-studies" onClick={closeMenu}>
+              <Link href="/casestudies/pharma-to-fmcg-transformation" onClick={closeMenu}>
                 Case Studies
               </Link>
             </summary>

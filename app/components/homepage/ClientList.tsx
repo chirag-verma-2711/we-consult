@@ -8,7 +8,8 @@ export default function ClientList() {
   const { ref, isVisible } = useInView({ threshold: 0.2 });
   return (
     <>
-      <div className="pb-[50px] w-full container">
+      <div className="bg-[var(--lgreen2)]">
+        <div className=" w-full container mx-auto md:py-20 py-10 px-5">
         <h2
           ref={ref}
           className={`fade-up ${
@@ -109,6 +110,7 @@ export default function ClientList() {
             className="h-auto object-contain"
           />
         </div>
+      </div>
       </div>
     </>
   );

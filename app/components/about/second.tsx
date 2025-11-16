@@ -9,16 +9,16 @@ export default function Second() {
   return (
     <>
       <section>
-        <div className="bg-[var(--lgreen3)]">
-          <div className="container mx-auto px-5 py-12">
+        <div className="bg-[url('/assests/about/second-bg.svg')]  bg-cover bg-no-repeat bg-center">
+          <div className="container mx-auto px-5 lg:py-22 py-12">
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-16">
               <div
                 ref={heading.ref}
-                className={`fade-up ${heading.isVisible ? "show" : ""} `}
+                className={`fade-up ${heading.isVisible ? "show" : ""} flex justify-center items-center`}
               >
                 <Image
-                  src="/assests/header/images/aboutsecond.webp"
-                  className="w-full h-auto"
+                  src="/assests/about/leap-bridge-consulting.svg"
+                  className="w-full max-w-[500px] mx-auto h-auto"
                   width={1000}
                   height={1000}
                   alt=""
@@ -33,25 +33,29 @@ export default function Second() {
                 >
                   Who we are?
                 </h2>
+
+                <div
+                  ref={heading.ref}
+                  className={`fade-up ${
+                    heading.isVisible ? "show" : ""
+                  } `}
+                >
+                  <p className="text-[22px] text-black text-medium mb-3">Driving Growth Through Transformation.</p>
+                </div>
+
                 <p
                   ref={heading.ref}
                   className={`fade-up ${
                     heading.isVisible ? "show" : ""
-                  } text-lg`}
+                  } text-lg capitalize`}
                 >
-                  Founded by Jatin Panchal and Vinod Rao, LeapBridge Consulting
-                  brings together over five decades of leadership across FMCG
-                  healthcare, and consumer retail. <br />
+                  <span className="text-[var(--dgreen)]">LeapBridge</span> Consulting is a boutique growth and transformation advisory firm helping consumer-facing businesses unlock scale and performance. We specialize in Route-to-Market redesign, sales excellence, and execution-led transformation across FMCG, healthcare, and consumer retail. <br />
                   <br />
-                  Jatin is a commercial transformation expert who has led
-                  large-scale growth and channel acceleration, while Vinod is a
-                  seasoned P&L leader known for driving sales excellence and
-                  executional discipline. <br />
+                  With <span className="text-[var(--dgreen)]">over 55 years of combined leadership experience</span>, we bring strategic depth and executional rigor, powered by sales technology and AI-driven insights that enable smarter, faster decisions. <br />
                   <br />
-                  Together, they combine strategic depth with field-tested
-                  insight to help organisations transform sales performance and
-                  unlock scalable growth.
+                  From digital sales enablement to channel transformation, we help brands bridge strategy and execution to drive measurable, lasting growth.
                 </p>
+                <p className="px-9 py-3 bg-[var(--dgreen2)] text-white capitalize text-lg font-medium mt-7 rounded-md">We don’t just advise, we co-create, build capability, and stay accountable for outcomes.</p>
               </div>
             </div>
           </div>
