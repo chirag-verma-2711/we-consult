@@ -1,14 +1,14 @@
 import "../globals.css";
-import Banner from "../components/casestudies/banner";
-import Parallax from "../components/casestudies/parallax";
-import ScrumPage from "../components/homepage/ScrumPage";
+// import Banner from "../components/casestudies/banner";
+// import Parallax from "../components/casestudies/parallax";
+// import ScrumPage from "../components/homepage/ScrumPage";
 
 export default function CaseStudies() {
   return (
     <>
-      <Banner />
+      {/* <Banner />
       <Parallax />
-      <ScrumPage />
+      <ScrumPage /> */}
     </>
   );
 }
