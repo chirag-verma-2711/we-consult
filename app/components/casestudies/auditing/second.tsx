@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import useInView from "@/app/hooks/useInView";
 
@@ -27,17 +27,15 @@ export default function Second() {
             <div className="mb-10">
               <h1
                 ref={heading.ref}
-                className={`fade-up ${
-                  heading.isVisible ? "show" : ""
-                } text-3xl font-bold text-[var(--dgreen)] text-center mb-5`}
+                className={`fade-up ${heading.isVisible ? "show" : ""
+                  } text-3xl font-bold text-[var(--dgreen)] text-center mb-5`}
               >
                 Notable Work Done
               </h1>
               <p
                 ref={subheading.ref}
-                className={`fade-up ${
-                  subheading.isVisible ? "show" : ""
-                } text-xl text-center`}
+                className={`fade-up ${subheading.isVisible ? "show" : ""
+                  } text-xl text-center`}
               >
                 Driven impactful transformations across diverse business
                 environments—from pharma-to-FMCG transitions and e-commerce
@@ -57,7 +55,7 @@ export default function Second() {
                 className={`fade-up ${link1.isVisible ? "show delay-1" : ""}`}
               >
                 <Link
-                  href="/casestudies/pharma-to-fmcg-transformation"
+                  href="/casestudies/pharma"
                   className=" "
                 >
                   Pharma-to-FMCG Transformation
@@ -67,7 +65,7 @@ export default function Second() {
                 ref={link2.ref}
                 className={`fade-up ${link2.isVisible ? "show delay-2" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/business" className=" ">
                   Business Turnaround from a Legacy Low-Margin Portfolio to a
                   Premium, Profitable Model
                 </Link>
@@ -76,7 +74,7 @@ export default function Second() {
                 ref={link3.ref}
                 className={`fade-up ${link3.isVisible ? "show delay-3" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/disrupting" className=" ">
                   Disrupting Rural Distribution Through Potential-Based
                   Expansion
                 </Link>
@@ -85,18 +83,17 @@ export default function Second() {
                 ref={link4.ref}
                 className={`fade-up ${link4.isVisible ? "show delay-4" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/urban" className=" ">
                   Urban Retail Footprint Efficiency Through Data-Led Selling
                 </Link>
               </div>
 
               <div
                 ref={link5.ref}
-                className={`fade-up ${
-                  link5.isVisible ? "show delay-5" : ""
-                } lg:ml-5`}
+                className={`fade-up ${link5.isVisible ? "show delay-5" : ""
+                  } lg:ml-5`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/trade" className=" ">
                   Trade Spends Optimization & PRGM Efficiency
                 </Link>
               </div>
@@ -104,17 +101,16 @@ export default function Second() {
                 ref={link6.ref}
                 className={`fade-up ${link6.isVisible ? "show delay-6" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/ecommerce" className=" ">
                   E-Commerce Scale-Up for a Legacy FMCG Business
                 </Link>
               </div>
               <div
                 ref={link7.ref}
-                className={`fade-up ${
-                  link7.isVisible ? "show delay-7" : ""
-                } lg:mr-5`}
+                className={`fade-up ${link7.isVisible ? "show delay-7" : ""
+                  } lg:mr-5`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/dms" className=" ">
                   Implementing a Distributor Management System (DMS) for Sales
                   Process Automation
                 </Link>
@@ -124,7 +120,7 @@ export default function Second() {
                 ref={link8.ref}
                 className={`fade-up ${link8.isVisible ? "show delay-8" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/fieldforce" className=" ">
                   Field Force Migration to Third-Party Payroll & Efficiency
                   Enhancement
                 </Link>
@@ -133,7 +129,7 @@ export default function Second() {
                 ref={link9.ref}
                 className={`fade-up ${link9.isVisible ? "show delay-9" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/auditing" className=" ">
                   Auditing the Distribution Footprint to Identify the Right
                   Store for a Cold-Chain Category
                 </Link>
@@ -142,7 +138,7 @@ export default function Second() {
                 ref={link10.ref}
                 className={`fade-up ${link10.isVisible ? "show delay-10" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/damages" className=" ">
                   Damages & Market Returns Optimization
                 </Link>
               </div>
@@ -150,7 +146,7 @@ export default function Second() {
                 ref={link11.ref}
                 className={`fade-up ${link11.isVisible ? "show delay-11" : ""}`}
               >
-                <Link href="" className=" ">
+                <Link href="/casestudies/gamification" className=" ">
                   Gamification to drive product launch placement
                 </Link>
               </div>
