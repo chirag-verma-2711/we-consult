@@ -321,7 +321,7 @@ export default function Third() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 -mt-[32px] mb-[40px] *:bg-[#ffffff] *:2xl:text-[18px] *:text-[16px] *:border *:border-[#859D8A]  *:px-6 *:py-3 *:flex *:items-center  *:gap-5">
-                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                  <div className="rounded-tr-3xl rounded-bl-3xl">
                     <Image
                       src="/assests/header/images/soaps.svg"
                       className="w-[50px] h-auto p-1"
