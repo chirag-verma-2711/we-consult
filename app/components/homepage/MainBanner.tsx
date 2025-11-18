@@ -30,14 +30,14 @@ const MainBanner: React.FC = () => {
 
   return (
     <div className="relative w-full  overflow-hidden">
-      {/* <iframe
+      <iframe
         className="absolute top-1/2 left-1/2 w-[200vw] h-[200vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         src="https://www.youtube.com/embed/IP3vF2jpnJk?autoplay=1&mute=1&loop=1&playlist=IP3vF2jpnJk&controls=0&modestbranding=1&showinfo=0&rel=0&disablekb=1&fs=0"
         title="Background Video"
         allow="autoplay; encrypted-media"
       ></iframe>
-      <div className="absolute inset-0 bg-[#1a3d3d]/80 z-10"></div> */}
-      <div className="absolute inset-0 bg-[var(--dgreen)] z-10"></div>
+      {/* <div className="absolute inset-0 bg-[#1a3d3d]/80 z-10"></div> */}
+      <div className="absolute inset-0 bg-[var(--dgreen)]/80 z-10"></div>
 
       {/* Your content over video */}
       <div className="relative z-10 text-white">

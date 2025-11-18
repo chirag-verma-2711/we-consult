@@ -40,22 +40,22 @@ export default function Second() {
                     heading.isVisible ? "show" : ""
                   } `}
                 >
-                  <p className="text-[22px] text-black text-medium mb-3">Driving Growth Through Transformation.</p>
+                  <p className="text-2xl text-black text-medium mb-3">Driving Growth Through Transformation.</p>
                 </div>
 
                 <p
                   ref={heading.ref}
                   className={`fade-up ${
                     heading.isVisible ? "show" : ""
-                  } text-lg capitalize`}
+                  } text-xl capitalize`}
                 >
-                  <span className="text-[var(--dgreen)]">LeapBridge</span> Consulting is a boutique growth and transformation advisory firm helping consumer-facing businesses unlock scale and performance. We specialize in Route-to-Market redesign, sales excellence, and execution-led transformation across FMCG, healthcare, and consumer retail. <br />
+                  <span className="text-[var(--dgreen)] font-semibold">LeapBridge</span> Consulting is a boutique growth and transformation advisory firm helping consumer-facing businesses unlock scale and performance. We specialize in Route-to-Market redesign, sales excellence, and execution-led transformation across FMCG, healthcare, and consumer retail. <br />
                   <br />
-                  With <span className="text-[var(--dgreen)]">over 55 years of combined leadership experience</span>, we bring strategic depth and executional rigor, powered by sales technology and AI-driven insights that enable smarter, faster decisions. <br />
+                  With <span className="text-[var(--dgreen)] font-semibold">over 55 years of combined leadership experience</span>, we bring strategic depth and executional rigor, powered by sales technology and AI-driven insights that enable smarter, faster decisions. <br />
                   <br />
                   From digital sales enablement to channel transformation, we help brands bridge strategy and execution to drive measurable, lasting growth.
                 </p>
-                <p className="px-9 py-3 bg-[var(--dgreen2)] text-white capitalize text-lg font-medium mt-7 rounded-md">We don’t just advise, we co-create, build capability, and stay accountable for outcomes.</p>
+                <p className="px-9 py-3 bg-[var(--dgreen2)] text-white capitalize text-2xl font-semibold mt-7 rounded-md">We don’t just advise, we co-create, build capability, and stay accountable for outcomes.</p>
               </div>
             </div>
           </div>

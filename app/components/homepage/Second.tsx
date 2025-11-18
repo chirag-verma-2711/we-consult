@@ -25,7 +25,7 @@ export default function Second() {
                   <h3 className="font-semibold text-3xl">Jatin Panchal</h3>
                   <p className="text-xl font-medium">Founder & Partner</p>
                   <p className="text-xl mb-3">
-                    MBA: SIMSR Exec MBA: INSEAD, France
+                    MBA: SIBM Exec MBA: INSEAD, France
                   </p>
                   <p className="text-xl">
                     A commercial transformation leader with over 25 years of experience in FMCG & consumer healthcare, driving growth, reach, & sales excellence across channels. Jatin has successfully led the transition of healthcare & pharma portfolios into consumer-facing FMCG businesses. Expertise in building new businesses, including ecom for FMCG firms, he blends analytical precision with people-centric leadership. He excels in designing transformative go-to-market strategies, building capable teams, & unlocking business momentum through insight-led execution.

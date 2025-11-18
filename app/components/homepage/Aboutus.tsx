@@ -18,7 +18,7 @@ export default function Aboutus() {
                 Driving Growth Through Transformation.
               </p>
 
-              <p className="text-center text-[var(--dgreen)] text-[21px] capitalize">
+              <p className="text-center text-[var(--dgreen)] text-xl ">
                 LeapBridge Consulting helps consumer-facing businesses scale
                 through Route-to-Market redesign, sales excellence, and
                 execution-led transformation. With 55+ years of combined

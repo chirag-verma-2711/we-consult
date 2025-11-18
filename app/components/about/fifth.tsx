@@ -12,7 +12,7 @@ export default function Fifth() {
     <>
       <section>
         <div className="bg-[#d9e6dc]">
-          <div className="container mx-auto px-5 lg:pt-22 py-12">
+          <div className="container mx-auto px-5 py-15">
             <div className="md:flex items-center gap-16 *:w-1/2">
               <div>
                 <div className="h-full flex flex-col justify-center md:pr-12">
@@ -29,7 +29,7 @@ export default function Fifth() {
                     ref={heading.ref}
                     className={`fade-up ${
                       heading.isVisible ? "show" : ""
-                    } text-[20px] text-[var(--dgreen)] font-medium`}
+                    } text-xl text-[var(--dgreen)] font-medium`}
                   >
                     We operate on a fractional leadership and project-based
                     model, enabling clients to access senior industry expertise
@@ -43,16 +43,16 @@ export default function Fifth() {
                     and sustained on ground.
                   </p>
 
-                  <Link
+                  {/* <Link
                     href="/"
                     className="text-[23px] text-white lg:mt-12 mt-6 bg-[var(--dgreen)] w-fit px-16 py-2 rounded-full transition ease-in-out hover:opacity-90"
                   >
                     Let&apos;s talk
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
-              <div className="lg:p-26 p-12">
+              <div className="lg:p-22 p-12">
                 <Image
                   src="/assests/about/create-value.png"
                   className="w-full h-auto object-contain block"

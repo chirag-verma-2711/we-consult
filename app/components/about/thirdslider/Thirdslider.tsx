@@ -40,15 +40,13 @@ export default function Carousel() {
               <h3 className="text-[80px] text-[var(--dgreen)] ">Vision</h3>
               <div className="bg-[var(--dgreen)] h-[1px] w-full mb-5"></div>
               <p className="text-lg">
-                To be the trusted partner for businesses seeking to transform
-                their sales and marketing capabilities, creating sustainable
-                growth and measurable impact across industries.
+                To be the most trusted partner for consumer brands seeking sustainable, profitable and scalable growth — by transforming sales systems, strengthening execution, and unlocking marketplace impact.
               </p>
 
-              <div className="mt-5 flex gap-3">
-                <span className="h-[32px] w-[32px] bg-[#A3B5A7] rounded-full block"></span>
-                <span className="h-[32px] w-[50px] bg-[#A3B5A7] rounded-full block"></span>
-                <span className="h-[32px] w-[32px] bg-[#A3B5A7] rounded-full block"></span>
+              <div className="mt-5 flex gap-2">
+                <span className="h-[32px] w-[32px] bg-[#7BBD93] rounded-full block"></span>
+                <span className="h-[32px] w-[55px] bg-[var(--dgreen)] rounded-full block"></span>
+                <span className="h-[32px] w-[32px] bg-[#7BBD93] rounded-full block"></span>
               </div>
             </div>
           </div>
@@ -61,15 +59,13 @@ export default function Carousel() {
               <h3 className="text-[80px] text-[var(--dgreen)] ">Mission</h3>
               <div className="bg-[var(--dgreen)] h-[1px] w-full mb-5"></div>
               <p className="text-lg">
-                To deliver innovative, practical, and scalable sales and
-                marketing solutions that empower organisations to optimise
-                processes, unlock efficiencies, and strengthen market presence.
+                To help consumer brands achieve profitable growth by designing winning GTM strategies, strengthening network efficiency, enabling disciplined execution, and building capable, future-ready teams.
               </p>
 
-              <div className="mt-5 flex gap-3">
-                <span className="h-[32px] w-[32px] bg-[#A3B5A7] rounded-full block"></span>
-                <span className="h-[32px] w-[50px] bg-[#A3B5A7] rounded-full block"></span>
-                <span className="h-[32px] w-[32px] bg-[#A3B5A7] rounded-full block"></span>
+              <div className="mt-5 flex gap-2">
+                <span className="h-[32px] w-[32px] bg-[#7BBD93] rounded-full block"></span>
+                <span className="h-[32px] w-[55px] bg-[var(--dgreen)] rounded-full block"></span>
+                <span className="h-[32px] w-[32px] bg-[#7BBD93] rounded-full block"></span>
               </div>
             </div>
           </div>
@@ -82,22 +78,19 @@ export default function Carousel() {
               <h3 className="text-[80px] text-[var(--dgreen)] ">Values</h3>
               <div className="bg-[var(--dgreen)] h-[1px] w-full mb-5"></div>
               <p className="text-lg">
-                <strong>Integrity:</strong> Building trust through honest and
-                transparent partnerships. <br />
-                <strong>Innovation:</strong> Driving fresh ideas and modern
-                practices for business success. <br />
-                <strong>Excellence:</strong> Setting high standards in every
-                engagement. <br />
-                <strong>Collaboration:</strong> Working hand-in-hand with
-                clients to deliver shared success. <br />
-                <strong>Impact:</strong> Ensuring every project creates
-                measurable business outcomes.
+                <strong>-</strong> Impact Over Activity <br />
+                <strong>-</strong> Partnership, Not Consultancy <br />
+                <strong>-</strong> Excellence in Execution <br />
+                <strong>-</strong> Simplicity Wins <br />
+                <strong>-</strong> Integrity & Unbiased Thinking <br />
+                <strong>-</strong> People at the Core <br />
+                <strong>-</strong> Continuous Improvement
               </p>
 
-              <div className="mt-5 flex gap-3">
-                <span className="h-[32px] w-[32px] bg-[#A3B5A7] rounded-full block"></span>
-                <span className="h-[32px] w-[50px] bg-[#A3B5A7] rounded-full block"></span>
-                <span className="h-[32px] w-[32px] bg-[#A3B5A7] rounded-full block"></span>
+              <div className="mt-5 flex gap-2">
+                <span className="h-[32px] w-[32px] bg-[#7BBD93] rounded-full block"></span>
+                <span className="h-[32px] w-[55px] bg-[var(--dgreen)] rounded-full block"></span>
+                <span className="h-[32px] w-[32px] bg-[#7BBD93] rounded-full block"></span>
               </div>
             </div>
           </div>
