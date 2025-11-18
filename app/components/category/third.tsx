@@ -38,8 +38,8 @@ export default function Third() {
                 consumer needs, we bring the right strategy for every business.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 text-white 2xl:max-w-[1300px] lg:max-w-[1150px]">
-              <div className="pe-20">
+            <div className="grid md:grid-cols-2 text-black 2xl:max-w-[1300px] lg:max-w-[1150px]">
+              {/* <div className="pe-20">
                 <div className="bg-[#A3B5A7] pt-5 pb-12 rounded-xl">
                   <h3 className="text-[25px] font-normal text-center text-[var(--dgreen)]">
                     Home & Personal Care
@@ -311,17 +311,369 @@ export default function Third() {
                     <p>Paediatric Special Care</p>
                   </div>
                 </div>
+              </div> */}
+
+              <div className="pe-20">
+                <div className="bg-[#147E5D] pt-5 pb-12 rounded-xl">
+                  <h3 className="text-[25px] font-normal text-center text-white">
+                    Home & Personal Care
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 -mt-[32px] mb-[40px] *:bg-[#ffffff] *:2xl:text-[18px] *:text-[16px] *:border *:border-[#859D8A]  *:px-6 *:py-3 *:flex *:items-center  *:gap-5">
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/soaps.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Soaps</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/LaundaryHomecleaners.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Laundry & Home cleaners</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/SkinCare.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Skin Care</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/Insectrepellent.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Insect repellent</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/Body&AdultDiapers.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Baby & Adult Diapers</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/MaleGrooming.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Male Grooming</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/Haircare.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Hair care</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/FemHygiene.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Fem Hygiene</p>
+                  </div>
+                </div>
+              </div>
+              <div className="pe-20">
+                <div className="bg-[#147E5D] pt-5 pb-12 rounded-xl">
+                  <h3 className="text-[25px] font-normal text-center text-white">
+                    Foods
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 -mt-[32px] mb-[40px] *:bg-[#ffffff] *:2xl:text-[18px] *:text-[16px] *:border *:border-[#859D8A]  *:px-6 *:py-3 *:flex *:items-center  *:gap-5">
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/Chocolates&Confectionery.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Chocolates & Confectionery</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/Biscuits&Cookies.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Biscuits & Cookies</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/SoftDrink&Beverage.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Soft Drink and Beverage</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/MaltFoodDrinks.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Malt Food Drinks</p>
+                  </div>
+
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/EdibleOils.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Edible Oils</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/Syrups&Spreads.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Syrups & Spreads</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/Dairy.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Dairy</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/SavourySnacks.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Savoury Snacks</p>
+                  </div>
+                </div>
+              </div>
+              <div className="pe-20">
+                <div className="bg-[#147E5D] pt-5 pb-12 rounded-xl">
+                  <h3 className="text-[25px] font-normal text-center text-white">
+                    Pharma & OTC
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 -mt-[32px] mb-[40px] *:bg-[#ffffff] *:2xl:text-[18px] *:text-[16px] *:border *:border-[#859D8A]  *:px-6 *:py-3 *:flex *:items-center  *:gap-5">
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/ProteinPowders.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Protein Powders</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/Rubefacient.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Rubefacient</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/InfantFormula.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Infant Formula</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/Ayurvedic&Herbals.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Ayurvedic and Herbals</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/Nutraceuticals.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Nutraceuticals</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/Vitamins&Supplements.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Vitamins and Supplements</p>
+                  </div>
+                  <div className="rounded-tl-3xl rounded-br-3xl  ">
+                    <Image
+                      src="/assests/header/images/WeightManagement.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Weight Management</p>
+                  </div>
+                  <div className="rounded-tr-3xl rounded-bl-3xl  ">
+                    <Image
+                      src="/assests/header/images/PaediatricSpecialCare.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>Paediatric Special Care</p>
+                  </div>
+                </div>
               </div>
 
               <div className="">
-                <h3 className="text-3xl mb-5">Channels & Geographies Expertise</h3>
-                <ul className="*:text-[25px] *:border-b *:border-dotted *:border-[#859D8A] *:ps-14">
-                  <li><div className="border-l border-[#859D8A] border-dotted py-2 px-4">Pan India : GT - Urban – Rural</div></li>
-                  <li><div className="border-l border-[#859D8A] border-dotted py-2 px-4">CSD, CPC</div></li>
-                  <li><div className="border-l border-[#859D8A] border-dotted py-2 px-4">Modern Trade</div></li>
-                  <li><div className="border-l border-[#859D8A] border-dotted py-2 px-4">E-com, Q-com</div></li>
-                  <li><div className="border-l border-[#859D8A] border-dotted py-2 px-4">Out of Home</div></li>
-                  <li className="!border-b-0"><div className="border-l border-[#859D8A] border-dotted py-2 px-4">HORECA</div></li>
+                <h3 className="text-white text-3xl mb-5">
+                  Channels & Geographies Expertise
+                </h3>
+                <ul className="text-white *:text-[25px]">
+                  <li>  
+                    <div className="py-2 flex items-center gap-5">
+                      <Image
+                      src="/assests/header/images/PanIndia.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>
+                      Pan India : GT - Urban – Rural
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="py-2 flex items-center gap-5">
+                      <Image
+                      src="/assests/header/images/csdcps.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>
+                      CSD, CPC
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="py-2 flex items-center gap-5">
+                      <Image
+                      src="/assests/header/images/ModernTrade.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>
+                      Modern Trade
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="py-2 flex items-center gap-5">
+                      <Image
+                      src="/assests/header/images/E-comQ-com.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>
+                      E-com, Q-com
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="py-2 flex items-center gap-5">
+                      <Image
+                      src="/assests/header/images/OutHome.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>
+                      Out of Home
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="py-2 flex items-center gap-5">
+                      <Image
+                      src="/assests/header/images/HORECA.svg"
+                      className="w-[50px] h-auto p-1"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                    <p>
+                      HORECA
+                      </p>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
