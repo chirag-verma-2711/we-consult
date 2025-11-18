@@ -28,7 +28,7 @@ export default function GreatResult() {
             We don’t just advise, we co-create, build capability, and stay
             accountable for outcomes.
           </h2>
-          <div
+          {/* <div
             ref={ref}
             className={`fade-up ${
               isVisible ? "show" : ""
@@ -43,7 +43,7 @@ export default function GreatResult() {
               <h3 className="text-2xl font-bold">100+</h3>
               <p className="text-sm">specialists</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

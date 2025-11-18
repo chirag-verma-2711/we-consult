@@ -9,10 +9,10 @@ export default function Testimonials() {
   return (
     <>
       <section>
-        <div className="px-5  py-10 bg-white">
+        <div className="px-5  py-15 bg-white">
           <div className="container mx-auto text-[var(--dgreen)]">
             <div className="text-[var(--dgreen)] text-center mb-10">
-              <h2 className="text-4xl font-semibold mb-2">Voices of Success</h2>
+              <h2 className="text-4xl font-semibold mb-2">Testimonials</h2>
               <p className="text-lg max-w-[500px] mx-auto">Discover how our collaboration has enabled brands to accelerate performance and scale with confidence</p>
             </div>
 

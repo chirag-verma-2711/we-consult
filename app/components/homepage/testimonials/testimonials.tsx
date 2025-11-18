@@ -1,30 +1,81 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function Carousel() {
+
+  
   const totalSlides = 4; // You have 5 slides
 
   const [current, setCurrent] = useState(0);
+  const startX = useRef(0); // To track the starting touch position
+  const isDragging = useRef(false); // To track the drag state
+  const carouselRef = useRef(null); // To reference the carousel container
 
+  // Function to move to the next slide
   const nextSlide = () =>
     setCurrent((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
 
-  // useEffect(() => {
-  //   const interval = setInterval(nextSlide, 4000);
-  //   return () => clearInterval(interval);
-  // }, [current]);
+  // Function to move to the previous slide
+  const prevSlide = () =>
+    setCurrent((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+
+  // Swipe logic to handle dragging/swiping
+  const handleTouchStart = (e: React.MouseEvent | React.TouchEvent) => {
+    isDragging.current = true;
+    startX.current = e.type.includes("mouse")
+      ? (e as React.MouseEvent).clientX
+      : (e as React.TouchEvent).touches[0].clientX;
+  };
+  const handleTouchMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging.current) return;
+
+    const moveX =
+      e.type.includes("mouse")
+        ? (e as React.MouseEvent).clientX - startX.current
+        : (e as React.TouchEvent).touches[0].clientX - startX.current;
+
+    if (moveX < -50) {
+      nextSlide(); // Swipe left
+      isDragging.current = false; // Disable dragging until the next swipe
+    } else if (moveX > 50) {
+      prevSlide(); // Swipe right
+      isDragging.current = false;
+    }
+  };
+
+
+const handleTouchEnd = () => {
+  isDragging.current = false;
+};
+
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [current]);
 
   return (
-    <div className="relative w-full container px-5 mx-auto overflow-hidden ">
-      <div className="relative w-full max-w-[1024px] mx-auto overflow-hidden ">
+    <div
+      className="relative w-full container px-5 mx-auto overflow-hidden"
+      ref={carouselRef}
+      onMouseDown={handleTouchStart}
+      onMouseMove={handleTouchMove}
+      onMouseUp={handleTouchEnd}
+      onMouseLeave={handleTouchEnd}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+
+      <div className="relative w-full max-w-[1200px] mx-auto overflow-hidden ">
         <div
           className="flex transition-transform duration-700 "
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
-          <div className="min-w-full relative">
+          <div className="min-w-full relative flex items-center">
             <div>
-              <div className="flex gap-5 items-center w-fit mx-auto mb-5">
+              <div className="flex gap-5 items-center w-fit mx-auto mb-5 cursor-default">
                 <div className="rounded-full overflow-hidden">
                   <Image
                     src="/assests/testimonials/Harsh-testi.jpg"
@@ -56,12 +107,12 @@ export default function Carousel() {
                   <div className="relative px-[50px] pb-[25px]">
                     <Image
                       src="/assests/testimonials/colon-start.svg"
-                      className="w-8 h-8 absolute -top-[25px] left-0 "
+                      className="w-10 h-10 absolute -top-[25px] left-0 "
                       width={500}
                       height={500}
                       alt=""
                     />
-                    <p className="text-center text-[#252525]">
+                    <p className="text-center text-xl text-[#252525] cursor-default">
                       Vinod shows a clear strategic outlook, combining long-term
                       planning with practical execution. He uses data and
                       analytics thoughtfully to guide decisions, improve
@@ -73,7 +124,7 @@ export default function Carousel() {
                     </p>
                     <Image
                       src="/assests/testimonials/colon-end.svg"
-                      className="w-8 h-8 absolute bottom-0 right-0 "
+                      className="w-10 h-10 absolute bottom-0 right-0 "
                       width={500}
                       height={500}
                       alt=""
@@ -83,9 +134,9 @@ export default function Carousel() {
               </div>
             </div>
           </div>
-          <div className="min-w-full relative">
+          <div className="min-w-full relative flex items-center">
             <div>
-              <div className="flex gap-5 items-center w-fit mx-auto mb-5">
+              <div className="flex gap-5 items-center w-fit mx-auto mb-5 cursor-default">
                 <div className="rounded-full overflow-hidden">
                   <Image
                     src="/assests/testimonials/Mohan-testi.jpg"
@@ -117,12 +168,12 @@ export default function Carousel() {
                   <div className="relative px-[50px] pb-[25px]">
                     <Image
                       src="/assests/testimonials/colon-start.svg"
-                      className="w-8 h-8 absolute -top-[25px] left-0 "
+                      className="w-10 h-10 absolute -top-[25px] left-0 "
                       width={500}
                       height={500}
                       alt=""
                     />
-                    <p className="text-center text-[#252525]">
+                    <p className="text-center text-xl text-[#252525] cursor-default">
                       Vinod has been a key leader in driving our Go-to-Market
                       (GTM) transformation journey. Over the past few years, he
                       has shaped and executed a well-defined roadmap that has
@@ -145,7 +196,7 @@ export default function Carousel() {
                     </p>
                     <Image
                       src="/assests/testimonials/colon-end.svg"
-                      className="w-8 h-8 absolute bottom-0 right-0 "
+                      className="w-10 h-10 absolute bottom-0 right-0 "
                       width={500}
                       height={500}
                       alt=""
@@ -155,9 +206,9 @@ export default function Carousel() {
               </div>
             </div>
           </div>
-          <div className="min-w-full relative">
+          <div className="min-w-full relative flex items-center">
             <div>
-              <div className="flex gap-5 items-center w-fit mx-auto mb-5">
+              <div className="flex gap-5 items-center w-fit mx-auto mb-5 cursor-default">
                 <div className="rounded-full overflow-hidden">
                   <Image
                     src="/assests/testimonials/Vivek-testi.jpg"
@@ -189,12 +240,12 @@ export default function Carousel() {
                   <div className="relative px-[50px] pb-[25px]">
                     <Image
                       src="/assests/testimonials/colon-start.svg"
-                      className="w-8 h-8 absolute -top-[25px] left-0 "
+                      className="w-10 h-10 absolute -top-[25px] left-0 "
                       width={500}
                       height={500}
                       alt=""
                     />
-                    <p className="text-center text-[#252525]">
+                    <p className="text-center text-xl text-[#252525] cursor-default">
                       Jatin Panchal brings a rare blend of strategic foresight
                       and on-ground precision to the world of sales and
                       distribution. At Godrej Consumer Products, he helped shape
@@ -211,7 +262,7 @@ export default function Carousel() {
                     </p>
                     <Image
                       src="/assests/testimonials/colon-end.svg"
-                      className="w-8 h-8 absolute bottom-0 right-0 "
+                      className="w-10 h-10 absolute bottom-0 right-0 "
                       width={500}
                       height={500}
                       alt=""
@@ -221,9 +272,9 @@ export default function Carousel() {
               </div>
             </div>
           </div>
-          <div className="min-w-full relative">
+          <div className="min-w-full relative flex items-center">
             <div>
-              <div className="flex gap-5 items-center w-fit mx-auto mb-5">
+              <div className="flex gap-5 items-center w-fit mx-auto mb-5 cursor-default">
                 <div className="rounded-full overflow-hidden">
                   <Image
                     src="/assests/testimonials/Sunil-testi.jpg"
@@ -255,12 +306,12 @@ export default function Carousel() {
                   <div className="relative px-[50px] pb-[25px]">
                     <Image
                       src="/assests/testimonials/colon-start.svg"
-                      className="w-8 h-8 absolute -top-[25px] left-0 "
+                      className="w-10 h-10 absolute -top-[25px] left-0 "
                       width={500}
                       height={500}
                       alt=""
                     />
-                    <p className="text-center text-[#252525]">
+                    <p className="text-center text-xl text-[#252525] cursor-default">
                       During our time together at GCPL, I had the opportunity to
                       see Jatin’s remarkable professional journey — from a
                       mid-level manager to a key leader driving several
@@ -281,7 +332,7 @@ export default function Carousel() {
                     </p>
                     <Image
                       src="/assests/testimonials/colon-end.svg"
-                      className="w-8 h-8 absolute bottom-0 right-0 "
+                      className="w-10 h-10 absolute bottom-0 right-0 "
                       width={500}
                       height={500}
                       alt=""

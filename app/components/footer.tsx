@@ -30,30 +30,24 @@ export default function Footer() {
     <>
       <footer className="bg-[var(--dgreen)] text-white pt-8">
         <div className="container px-4 sm:px-6 mx-auto">
-          <div className="  py-16 px-14 mx-auto flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6border-b border-gray-700">
-            {/* Logo */}
+          {/* <div className="  py-16 px-14 mx-auto flex flex-col md:flex-row justify-between items-center bg-[#253c3d] rounded-[10px] gap-6border-b border-gray-700">
             <div>
-              {/* <Image src="/assests/header/images/665d580d007277205ba132e1_LogoLight.svg" alt="We Consult Logo" width={300} height={50} className="h-8" />
-               */}
               <h2 className="text-2xl font-semibold text-[var(--lgreen)]">
                 Subscribe to our newsletter!
               </h2>
             </div>
-            {/* Newsletter */}
             <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:bg-[#1B3233] md:rounded-full md:overflow-hidden md:border md:border-gray-600 gap-4">
-              {/* Input */}
               <input
                 type="email"
                 placeholder="Your email"
                 className="w-full px-4 py-4 md:px-4 md:py-2 bg-[#1B3233] text-gray-200 placeholder-gray-400 focus:outline-none rounded-[50px] md:rounded-none text-center md:text-left"
               />
 
-              {/* Button */}
               <button className="ebutton bg-[#cde8d9] text-[#05201d] font-medium px-6 py-4 md:px-6 md:py-2 hover:bg-[#bde0cc] transition rounded-[50px] w-full md:w-auto md:rounded-none">
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Top Section */}
           <div
@@ -65,18 +59,19 @@ export default function Footer() {
               <img
                 src="/assests/header/images/leapbridgelogo.svg"
                 alt="Leap Bridge Consulting Logo"
-                width={180}
-                height={60}
-                className="mb-4"
+                width={500}
+                height={500}
+                className="mb-4 w-full h-auto max-w-[250px]"
               />
             </div>
 
             {/* Navigation Links */}
-            <div className="flex flex-col space-y-2 lg:border-r  border-dotted border-[#356E54]">
+            <div className="flex flex-col space-y-2 lg:border-r *:text-xl border-dotted border-[#356E54]">
+             
                 <Link
                   href="/home"
                   className={`hover:text-[#53FFA9] transition ${
-                    pathname === "/home"
+                    pathname === "/"
                       ? "text-[#53FFA9]"
                       : "text-[var(--lgreen)]"
                   }`}
@@ -157,7 +152,7 @@ export default function Footer() {
             </div>
 
             {/* Policies */}
-            <div className="flex flex-col space-y-2 sm:border-r border-dotted border-[#356E54]">
+            <div className="flex flex-col space-y-2 sm:border-r  *:text-xl border-dotted border-[#356E54]">
               <Link href="" className="hover:text-[#9BE3B3] transition">
                 Privacy Policy
               </Link>
@@ -170,7 +165,7 @@ export default function Footer() {
             </div>
 
             {/* Contact + Social */}
-            <div className="space-y-3">
+            <div className="space-y-3  *:text-xl">
               <a
                 href="tel:9167063112"
                 className="text-sm hover:text-[#9BE3B3] transition"

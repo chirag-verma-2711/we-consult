@@ -30,20 +30,21 @@ export default function Header() {
     <header className={`sticky top-0 z-50 ${satoshi.className}`}>
       <nav className="bg-[var(--dgreen)] border-b border-gray-700 relative">
         <div className="container mx-auto px-4 sm:px-5">
-          <div className="flex justify-between items-center h-[82px]">
+          <div className="flex justify-between items-center ">
             {/* Logo */}
             <Link href="/" className="text-xl font-bold text-gray-800">
               <img
                 src="/assests/header/images/leapbridgelogo.svg"
                 alt="Logo"
                 width={500}
-                height={100}
-                className="h-[50px] w-auto"
+                height={500}
+                // className="h-[50px] w-auto"
+                className="my-4 w-full h-auto max-w-[230px]"
               />
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center justify-end flex-1">
+            <div className="hidden md:flex [&_a]:text-xl items-center justify-end flex-1 ">
               <div className="relative group">
                 <Link
                   href="/"

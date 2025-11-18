@@ -25,7 +25,7 @@ const GoodInsights = () => {
             heading.isVisible ? "show" : ""
           } text-5xl font-semibold text-[#1B3233] mb-4 text-center`}
         >
-          Voices of Success
+          Testimonials
         </h2>
 
         <p

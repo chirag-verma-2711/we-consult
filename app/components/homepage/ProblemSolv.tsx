@@ -10,7 +10,7 @@ const ProblemSolv = () => {
     <section className=" min-h-screen flex flex-col md:flex-row py-5">
       <div className="container mx-auto px-4 flex flex-wrap=">
         <div className="process md:w-1/2 w-full md:p-8 py-8 md:sticky md:top-[50px] md:h-screen">
-          <div className=" max-w-md  mb-3">
+          <div className=" max-w-xl  mb-3">
             <h2
               ref={ref}
               className={`fade-up ${
@@ -24,7 +24,7 @@ const ProblemSolv = () => {
               ref={ref}
               className={`fade-up ${
                 isVisible ? "show" : ""
-              } text-lg  font-normal text-[var(--dgreen)]  mb-3`}
+              } text-xl  font-medium text-[var(--dgreen)]  mb-3`}
             >
               We operate on a fractional leadership and project-based model,
               enabling clients to access senior industry expertise without
@@ -34,7 +34,7 @@ const ProblemSolv = () => {
               ref={ref}
               className={`fade-up ${
                 isVisible ? "show" : ""
-              } text-lg font-normal text-[var(--dgreen)]  mb-3`}
+              } text-xl font-medium text-[var(--dgreen)]  mb-3`}
             >
               At LeapBridge, we believe in bridging the gap between Organisation
               Strategy & On-ground Execution. Our approach blends data-backed
@@ -49,7 +49,7 @@ const ProblemSolv = () => {
             >
               Let’s talk
             </button> */}
-            <div
+            {/* <div
               ref={ref}
               className={`fade-up ${isVisible ? "show" : ""} mt-7`}
             >
@@ -59,11 +59,59 @@ const ProblemSolv = () => {
               >
                 Let’s talk
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
+        <div className="md:w-1/2 w-full md:p-8 py-8 space-y-6 right-sticky-process text-white [&>*:nth-child(odd)]:bg-[var(--dgreen)] [&>*:nth-child(even)]:bg-[var(--dgreen2)] *:rounded-lg *:p-8 *:md:p-16  *:lg:px-22 ">
+          <div ref={ref} className={`fade-up ${isVisible ? "show" : ""}   `}>
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light     ">
+              1
+            </h3>
+            <h4 className="font-medium leading-[120%] text-3xl mb-4 md:mb-6 lg:mb-8">
+              GTM TRANSFORMATION
+            </h4>
+            <p className="text-[16px] md:text-[18px] lg:text-[20px] mt-2">
+              We redefine go-to-market strategy to deliver profitable, scalable growth through sharper market design and execution excellence.
+            </p>
+          </div>
 
-        <div className="md:w-1/2 w-full md:p-8 py-8 space-y-6 right-sticky-process text-white *:bg-[var(--dgreen)] *:rounded-lg *:p-8 *:md:p-16  *:lg:px-22 ">
+          <div className="  ">
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light         ">
+              2
+            </h3>
+            <h4 className="font-medium leading-[120%] text-3xl mb-4 md:mb-6 lg:mb-8">
+              NETWORK EFFICIENCY
+            </h4>
+            <p className="text-[16px] md:text-[18px] lg:text-[20px] mt-2">
+              We partner with organizations to drive efficiencies across sales & distribution verticals.
+            </p>
+          </div>
+
+          <div className="  ">
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light         ">
+              3
+            </h3>
+            <h4 className="font-medium leading-[120%] text-3xl mb-4 md:mb-6 lg:mb-8">
+              CAPABILITY
+            </h4>
+            <p className="text-[16px] md:text-[18px] lg:text-[20px] mt-2">
+              Building the right people and process capabilities to sustain transformation and accelerate performance.
+            </p>
+          </div>
+
+          <div className="  ">
+            <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light         ">
+              4
+            </h3>
+            <h4 className="font-medium leading-[120%] text-3xl mb-4 md:mb-6 lg:mb-8">
+              TECHNOLOGY & DATA ANALYTICS
+            </h4>
+            <p className="text-[16px] md:text-[18px] lg:text-[20px] mt-2">
+              Embedding technology and analytics to make decisions faster, smarter, and more predictive.
+            </p>
+          </div>
+        </div>
+        {/* <div className="md:w-1/2 w-full md:p-8 py-8 space-y-6 right-sticky-process text-white [&>*:nth-child(odd)]:bg-[var(--dgreen)] [&>*:nth-child(even)]:bg-[var(--dgreen2)] *:rounded-lg *:p-8 *:md:p-16  *:lg:px-22 ">
           <div ref={ref} className={`fade-up ${isVisible ? "show" : ""}   `}>
             <h3 className="text-[60px] md:text-[80px] lg:text-[100px] font-light     ">
               1
@@ -119,7 +167,7 @@ const ProblemSolv = () => {
               turpis et arcu.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -18,20 +18,20 @@ export default function Grid() {
     <>
       <section>
         <div className="">
-          <div className="container mx-auto px-5 py-10">
+          <div className="container mx-auto px-5 py-15">
             <div className="mb-10">
               <h1
                 ref={heading.ref}
                 className={`fade-up ${
                   heading.isVisible ? "show" : ""
-                } text-2xl font-bold text-[var(--dgreen)] text-center mb-5`}
+                } text-4xl font-bold text-[var(--dgreen)] text-center mb-5`}
               >
                 DELIVERABLES / OUTCOMES
               </h1>
             </div>
 
             <div
-              className="flex justify-center items-stretch flex-wrap mb-5 2xl:gap-7 lg:gap-5 gap-3  *:lg:w-[31%]  *:md:w-[48%] *:w-full *:md:max-w-full *:max-w-[400px] [&>div>div]:py-5 [&>div>div]:lg:pb-8 [&>div>div]:lg:px-10 [&>div>div]:px-5 [&>div>div]:text-center [&>div>div]:text-white [&>div>div]:text-xl [&>div>div]:rounded-xl  [&>div>div]:h-full  [&>div>div]:transition [&>div>div]:ease-in-out [&>div>div]:hover:opacity-90 [&>div:nth-child(odd)>div]:bg-[var(--dgreen)] [&>div:nth-child(even)>div]:bg-[var(--dgreen2)] [&_p]:text-white [&_p]:text-[17px] [&_h3]:text-white [&_h3]:mb-3 [&_h3]:font-semibold [&_img]:max-w-[80px] [&_img]:overflow-visible [&_img]:p-[20px] [&_img]:mb-5 [&_img]:bg-white [&_img]:rounded-full [&_img]:h-auto [&_img]:mx-auto"
+              className="flex justify-center items-stretch flex-wrap mb-5 2xl:gap-7 lg:gap-5 gap-3  *:lg:w-[31%]  *:md:w-[48%] *:w-full *:md:max-w-full *:max-w-[400px] [&>div>div]:py-8 [&>div>div]:lg:pb-8 [&>div>div]:lg:px-10 [&>div>div]:px-5 [&>div>div]:text-center [&>div>div]:text-white [&>div>div]:text-xl [&>div>div]:rounded-xl  [&>div>div]:h-full  [&>div>div]:transition [&>div>div]:ease-in-out [&>div>div]:hover:opacity-90 [&>div:nth-child(odd)>div]:bg-[var(--dgreen)] [&>div:nth-child(even)>div]:bg-[var(--dgreen2)] [&_p]:text-white [&_p]:text-xl [&_h3]:text-white [&_h3]:mb-3 [&_h3]:text-2xl [&_h3]:font-semibold [&_img]:max-w-[100px] [&_img]:overflow-visible [&_img]:p-[20px] [&_img]:mb-5 [&_img]:bg-white [&_img]:rounded-full [&_img]:h-auto [&_img]:mx-auto"
             >
               <div
                 ref={link1.ref}

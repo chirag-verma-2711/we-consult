@@ -9,7 +9,7 @@ export default function ClientList() {
   return (
     <>
       <div className="bg-[var(--lgreen2)]">
-        <div className=" w-full container mx-auto md:py-20 py-10 px-5">
+        <div className=" w-full container mx-auto py-15 px-5">
         <h2
           ref={ref}
           className={`fade-up ${

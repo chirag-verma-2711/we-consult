@@ -140,7 +140,7 @@ export default function Third() {
                 <div className="grid grid-cols-2 gap-3 -mt-[32px] mb-[40px] *:bg-[#5B6F60] *:2xl:text-[18px] *:text-[16px] *:border *:border-[#859D8A]  *:px-6 *:py-3 *:flex *:items-center  *:gap-5">
                   <div className="rounded-tr-3xl rounded-bl-3xl  ">
                     <Image
-                      src="/assests/header/images/soaps.png"
+                      src="/assests/header/images/choclate.svg"
                       className="w-[50px] h-auto p-1"
                       width={200}
                       height={200}
@@ -150,7 +150,7 @@ export default function Third() {
                   </div>
                   <div className="rounded-tl-3xl rounded-br-3xl  ">
                     <Image
-                      src="/assests/header/images/laundry.png"
+                      src="/assests/header/images/soft-drink.svg"
                       className="w-[50px] h-auto p-1"
                       width={200}
                       height={200}

@@ -11,10 +11,10 @@ export default function Aboutus() {
         <div className="px-5 lg:py-40 md:py-20 py-10 bg-[var(--lgreen2)]">
           <div className="container mx-auto">
             <div className="max-w-[800px] mx-auto">
-              <h2 className="text-3xl font-bold text-center text-[var(--dgreen)]">
+              <h2 className="text-4xl font-bold text-center mb-2 text-[var(--dgreen)]">
                 What do we do ?
               </h2>
-              <p className="text-2xl font-medium text-center text-[var(--dgreen)]">
+              <p className="text-2xl font-medium mb-2 text-center text-[var(--dgreen)]">
                 Driving Growth Through Transformation.
               </p>
 
